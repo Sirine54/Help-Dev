@@ -1,0 +1,139 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.slider {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 0.5s ease;
+  }
+
+
+ 
+  
+  .current {
+    opacity: 1;
+    transform: translateX(0);
+    text-align: left;
+    
+  }
+  .head-Text{
+    font-size: 4rem;
+  }
+  .content-Text{
+font-size: 25px;
+font-family: inherit;
+  }
+  
+  .content {
+    position: absolute;
+    top: 15rem;
+    left:5em;
+    opacity: 0;
+    width: 40%;
+    color: #fff;
+    padding: 3rem;
+    /* background: rgba(0, 0, 0, 0.042); */
+    animation: slide-up 5s ease 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    visibility: visible;
+  }
+  
+  @keyframes slide-up {
+    0% {
+      visibility: visible;
+      opacity:1;
+     
+      
+    }
+    20%{
+        visibility: visible;
+        opacity:.8;
+     
+    }
+    30%{
+        visibility: visible;
+        opacity:.6;
+      
+    }
+    60%{
+        visibility: visible;
+        opacity:.4;
+      
+    }
+    80%{
+        visibility: visible;
+        opacity:.3;
+        
+    }
+    100% {
+      visibility: visible;
+      opacity: 0;
+      
+    
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .content {
+      width: 80%;
+    }
+  }
+  
+  .content > * {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  .current .content {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s ease;
+  }
+  
+  /* .arrow {
+    border: 2px solid rgba(255, 255, 255, 0.271);
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.271);
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    transition: .2s all ease-in-out;
+    z-index: 999;
+  }
+  .arrow:hover {
+    background-color: #fff;
+    color: #777;
+  } */
+  
+  /* .next {
+    top: 35%;
+    right: 1.5rem;
+  }
+  .prev {
+    top: 35%;
+    left: 1.5rem;
+  } */
+  
+  hr {
+    height: 2px;
+    background: white;
+    width: 50%;
+  }

@@ -1,0 +1,157 @@
+
+.form{
+    max-width: 40%;
+    margin: 15px auto;
+    padding: 15px;
+    box-shadow: 1px 1px 11px 10px rgba(0, 0, 0, 0.164);
+}
+.inputs{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+   grid-gap: 15px;
+   padding: 12px;
+}
+.inputBox:first-child{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.inputBox:nth-child(2){
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.inputBox:nth-child(3){
+    grid-column:1/3;
+    grid-row: 2/3;
+}
+.inputBox:nth-child(4){
+    grid-column:1/3;
+    grid-row: 3/4;
+}
+.inputBox:nth-child(5){
+    grid-column:1/3;
+    grid-row: 4/5;
+}
+.inputBox:last-child{
+    grid-column:1/3;
+    grid-row: 5/-1;
+}
+
+.inputBox{
+    position: relative;
+    margin: 17px;
+}
+input{
+    height: 45px;
+    font-size: 18px;
+    border:none;
+    border:1px solid rgba(71, 66, 64, 0.784);
+    border-radius: 4px;
+    /* margin:15px 0 0 5px; */
+    padding-left: 5px;
+    width: 100%;
+    background-color: transparent;
+}
+
+input:focus{
+    outline: none;
+}
+.inputBox label{
+    position: absolute;
+    top:-10px;
+    padding-left:2px;
+    font-size: 16px;
+    left:0px;
+    z-index: 1;
+    color: black;
+    font-weight: 600;
+    background-color: white;
+    transition: top .5s;
+
+    }
+
+  /* .inputBox input:focus ~ label,
+  .inputBox input:valid ~ label{
+    top:-9px;
+   }  */
+.btnGroup{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    
+}
+.google,
+.facebook{
+    padding: 15px;
+    margin: 5px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .2s all;
+    
+}
+.facebook{
+    border: none;
+    background-color: rgb(64, 90, 147);
+    color: white;
+}
+.google{
+    border: none;
+    background-color: rgba(130, 129, 129, 0.193);
+    color: rgba(0, 0, 0, 0.718);
+    display: flex;
+    justify-content: center;
+ 
+}
+.fa-facebook{
+    padding-right: 15px;
+}
+
+.googleIcon{
+    width: 15px;
+    padding-right: 15px;
+   
+
+}
+.google:hover,
+.facebook:hover{
+    transform: scale(1.01);
+}
+.google:focus,
+.facebook:focus{
+    outline: 2px solid black;
+    outline-offset: 3px;
+}
+.divider{
+ font-size: 25px;
+}
+h3{
+    padding-block: 15px;
+}
+
+.btnSignGroup{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 15px;
+}
+.sign{
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+    padding-inline: 45px;
+    background-color: rgba(157, 155, 155, 0.333);
+}
+.errorMessage{
+   position: absolute;
+left:0;
+top:38px;
+padding-block: 15px;
+color: rgb(171, 15, 15);
+font-weight: 600;
+font-size: 15px;
+visibility: hidden;
+}
+.fa-circle-exclamation{
+    padding-right: 4px;
+}
