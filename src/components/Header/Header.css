@@ -5,14 +5,14 @@
 }
 
 .nav-links{
-    /* background:rgba(11, 10, 16, 0.645); */
+    background:rgba(11, 10, 16, 0.645);
     /* color: white; */
     padding: 3% 4%;
     display:flex;
     justify-content: space-between;
     align-items: center;
     /* padding:auto 6% ; */
-    position: absolute;
+    position: relative;
     max-width: 100%;
     right:0;
     left:0;
@@ -54,14 +54,21 @@
     color: rgb(150, 137, 131);
     text-shadow: 1px 1px 1px 1px white;
 }
-
+.profileData{
+    display: flex;
+    flex-direction: column;
+}
+#photoImg{
+    border-radius: 50px;
+    width:45px
+}
 /* .header-lists li a::before{
    content: '';
    position: absolute;
    background: rgb(150, 137, 131);
    height: 3px;
    bottom:50px;
-   width: 0%;
+   width: 100%;
   transition: .5s all ease-in;
    
 } */
