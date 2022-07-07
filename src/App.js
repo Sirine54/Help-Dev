@@ -5,6 +5,8 @@ import {
   BrowserRouter} from "react-router-dom";
 import SignUp from './components/Authentification/SignUp';
 import SignIn from './components/Authentification/SignIn';
+import About from './components/About/About';
+import Explore from './components/Home/Explore';
 
 import {Routes,Route} from 'react-router-dom'
 
@@ -12,6 +14,7 @@ import {Routes,Route} from 'react-router-dom'
 function App() {
   return (
     <div className="App">
+      
       {/* <BrowserRouter>
       <Header/>
       <Home/>
@@ -19,15 +22,21 @@ function App() {
       <SignIn/>
       </BrowserRouter> */}
   <Header/>
-      <Routes>
+
+      {/* <SignUp/>
+      <SignIn/> */}
+    
+      {/* 
       
+         */
+   <Routes>
         <Route path='/' element={<Home/>}></Route>
-        
         <Route path='/SignIn' element={<SignIn/>}></Route>
         <Route path='/SignUp' element={<SignUp/>}></Route>
+      
 
       </Routes>
-      
+      }
     </div>
   );
 }

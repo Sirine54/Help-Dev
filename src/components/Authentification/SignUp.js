@@ -5,6 +5,8 @@ import { Link ,useNavigate } from "react-router-dom";
 import {signInWithPopup,FacebookAuthProvider,GoogleAuthProvider,onAuthStateChanged} from 'firebase/auth'
 import{authentification} from '../../firebase-config'
 
+import { useForm } from "react-hook-form";
+
 export default function SignUp() {
 
   const navigate = useNavigate();
@@ -58,8 +60,9 @@ export default function SignUp() {
     })
 }
 
-const[name,setName]=useState("");
-const[last,setLast]=useState("");
+
+const[name,setUserName]=useState("");
+
 const [email, setEmail] = useState("");
 const[confirmEmail,setConfirmEmail]=useState("");
 const [password, setPassword] = useState("");
@@ -68,30 +71,37 @@ const [error, setError] = useState("");
 
 
 
-const handleSubmit=(e)=>{
-  e.preventDefault();
- if(name ===''){
-  // errorForm(setName,'username is ')
-  alert('error!!')
- }
-}
+// const handleSubmit=(e)=>{
+//   e.preventDefault();
+//  if(name ===''){
+//   // errorForm(setName,'username is ')
+//   alert('error!!')
+//  }
+// }
 
+const { register, handleSubmit } = useForm();
+  const onSubmit = data => console.log(data);
 
     ///////////////Error Message///////////////////////// 
 
 
-// const errorForm=(input,message)=>{
-//   const formControl = input.parentElement; // .control-form
-//   const small = document.querySelector('small')
+const errorForm=(input,message)=>{
+ 
+    const formControl = document.querySelector('.formControl')// .control-form
 
-//   small.innerText = message;
+     
+  const small = document.querySelector('small')
+
+  small.innerText = message;
   
-//   //formControl.className ='control-form error'
-//   formControl.classList.add('errorMessage');
+  //formControl.className ='control-form error'
 
+  formControl.classList.add('errorMessage');
+
+ 
 
   
-// }
+}
 const checkEmail=(email)=>{
   return `/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(${email})`;
 
@@ -117,49 +127,43 @@ const checkEmail=(email)=>{
       <h3>Sign up with your email address</h3>
       
       <div className="inputs">
-        <div className="inputBox">
-          <input className="name" type="text"onChange={(e) => setName(e.target.value)} />
-          <label>First Name</label>
-          <small className="formControl" onChange={(e) => setError(e.target.value)} >
-            <i class="fa-solid fa-circle-exclamation"></i> 
-          </small>
+        <div className="inputBox formControl">
+          <input className="name" type="text"onChange={(e) => setUserName(e.target.value)}/>
+          <label>UserName</label>
+          {/* <small>
+         <i class="fa-solid fa-circle-exclamation"></i>gkjbzqkbd 
+          </small> */}
         </div>
 
-        <div className="inputBox">
-          <input className="family" type="text"  onChange={(e) => setLast(e.target.value)}/>
-          <label>Last Name</label>
-          <small className="formControl" >
-            <i class="fa-solid fa-circle-exclamation"></i>
-          </small>
-        </div>
+    
 
-        <div className="inputBox">
+        <div className="inputBox formControl">
           <input className="email" type="email"  onChange={(e) => setEmail(e.target.value)}/>
           <label>Email</label>
-          <small className="formControl">
+          <small>
             <i class="fa-solid fa-circle-exclamation"></i>
           </small>
         </div>
 
-        <div className="inputBox">
+        <div className="inputBox formControl">
           <input className="confirmEmail" type="email"  onChange={(e) => setConfirmEmail(e.target.value)}/>
           <label>Confirm Email</label>
-          <small className="formControl">
+          <small>
             <i class="fa-solid fa-circle-exclamation"></i>
           </small>
         </div>
-        <div className="inputBox">
+        <div className="inputBox formControl">
           <input className="password" type="password"  onChange={(e) => setPassword(e.target.value)}/>
           <label>Password</label>
-          <small className="formControl">
+          <small>
             <i class="fa-solid fa-circle-exclamation"></i>
           </small>
         </div>
 
-        <div className="inputBox">
+        <div className="inputBox formControl">
           <input className="confirmPassword" type="password"  onChange={(e) => setConfirmPassword(e.target.value)}/>
           <label>Confirm Password</label>
-          <small className="formControl">
+          <small>
             <i class="fa-solid fa-circle-exclamation"></i>
           </small>
         </div>
@@ -168,7 +172,7 @@ const checkEmail=(email)=>{
         <button className="sign" type="submit">
         <span className="text">Register</span>
         </button>
-        <span>Already have an account  <Link to="/" className="linked">Sign in</Link></span>
+        <span>Already have an account  <Link to="/SignIn" className="linked">Sign in</Link></span>
         
         {/* <button className="sign"> <span className="text">Sign In</span></button> */}
       </div>

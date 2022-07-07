@@ -1,0 +1,15 @@
+
+
+
+/* .fade-in{
+    position: relative;
+    transform: translateY(150px);
+   opacity: 0;
+   transition: all 1s ease;
+  
+  }
+  .fade-in.appear{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+   */

@@ -1,6 +1,6 @@
 import {React} from 'react'
 import './Sign.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate} from 'react-router-dom'
 
 
 import {signInWithPopup,FacebookAuthProvider,GoogleAuthProvider,onAuthStateChanged} from 'firebase/auth'
@@ -11,7 +11,7 @@ import google from "../../assets/google.png";
 
 export default function SignIn() {
 
-  
+ 
 
   const navigate = useNavigate();
   
