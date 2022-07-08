@@ -1,33 +1,58 @@
-import {React} from 'react'
+import {React,useState} from 'react'
 import './Sign.css'
 import { Link, useNavigate} from 'react-router-dom'
 
 
-import {signInWithPopup,FacebookAuthProvider,GoogleAuthProvider,onAuthStateChanged} from 'firebase/auth'
-import{authentification} from '../../firebase-config'
+import {signInWithPopup,FacebookAuthProvider,GoogleAuthProvider,onAuthStateChanged, signInWithEmailAndPassword} from 'firebase/auth'
+import{auth} from '../../firebase-config'
 import google from "../../assets/google.png";
 
 
 
 export default function SignIn() {
 
- 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
   
+  const signWithEmail = (e)=>{
+    e.preventDefault()
+    signInWithEmailAndPassword(auth,email,password)
+    .then((res)=>{
+     
+      auth.onAuthStateChanged(user=>{
+        if(user){
+          navigate('/', { replace: true })
+          console.log(user)
+          //user.photoURL
+          // alert( `Hello ${user.displayName}! User ID: ${user.uid} userPhoto:${user.photo}`)
+          document.getElementById('log').style='display:none'
+      
+        //  document.getElementById('userName').innerHTML=`${user.displayName}`
+  
+        }else{
+          alert('none')
+        }
+       })
+    }).catch((err)=>{
+      console.log(err)
+    })
+  }
 
   const signInWithFacebook = () =>{
       const provider = new FacebookAuthProvider();
-      signInWithPopup(authentification,provider)
+      signInWithPopup(auth,provider)
       .then((res)=>{
         // console.log(res)
-        authentification.onAuthStateChanged(user=>{
+        auth.onAuthStateChanged(user=>{
           if(user){
             navigate('/', { replace: true })
             console.log(user)
             //user.photoURL
             // alert( `Hello ${user.displayName}! User ID: ${user.uid} userPhoto:${user.photo}`)
             document.getElementById('log').style='display:none'
+            document.getElementById('photoImg').style='display:block'
             document.getElementById('photoImg').src=`${user.photoURL}`
            document.getElementById('userName').innerHTML=`${user.displayName}`
     
@@ -43,9 +68,9 @@ export default function SignIn() {
 
   const signInWithGoogle = () =>{
     const provider = new GoogleAuthProvider();
-    signInWithPopup(authentification,provider)
+    signInWithPopup(auth,provider)
     .then((res)=>{
-      authentification.onAuthStateChanged(user=>{
+      auth.onAuthStateChanged(user=>{
         if(user){
           navigate('/', { replace: true })
           console.log(user)
@@ -64,13 +89,12 @@ export default function SignIn() {
     })
 }
   return (
+    <>
+      <Link to='/' spy={true} smooth={true}><h1 className="homePage">Home</h1></Link>
     <div id='signIn'>
       <form
       className="form form1"
-      onSubmit={(e) => {
-        e.preventDefault();
-        console.log("clicked");
-      }}>
+      onSubmit={signWithEmail}>
    
       <h1 className="sign-title">Sign in for free</h1>
       <div className="btnGroup">
@@ -78,7 +102,7 @@ export default function SignIn() {
           <i class="fa-brands fa-facebook"></i> Sign in with facebook
         </button>
         <button className="google" onClick={signInWithGoogle}>
-          <img src={google} className="googleIcon"></img>Sign in with google
+          <img src={google} className="googleIcon" ></img>Sign in with google
         </button>
       </div>
       <span className="divider">or</span>
@@ -89,19 +113,15 @@ export default function SignIn() {
 
 
         <div className="inputBox">
-          <input className="email" type="email" />
+          <input className="email" type="email" onChange={(e) => setEmail(e.target.value)}/>
           <label>Email</label>
-          <span className="errorMessage">
-            <i class="fa-solid fa-circle-exclamation"></i>
-          </span>
+          <small className="errorMessage"><i class="fa-solid fa-circle-exclamation"></i></small>
         </div>
 
         <div className="inputBox">
-          <input className="password" type="password" />
+          <input className="password" type="password" onChange={(e) => setPassword(e.target.value)}/>
           <label>Password</label>
-          <span className="errorMessage">
-            <i class="fa-solid fa-circle-exclamation"></i>
-          </span>
+          <small className="errorMessage"><i class="fa-solid fa-circle-exclamation"></i></small>
         </div>
 
      </div>
@@ -116,6 +136,7 @@ export default function SignIn() {
       </div>
      </form>
      </div>
+     </> 
   )
 }
 

@@ -36,7 +36,7 @@ function Header() {
             <li><Link  to="#services" activeClass="active" spy={true} smooth={true} offset={-100} duration={500} >services</Link></li>
             <li><Link to="#contact" activeClass="active"spy={true} smooth={true} offset={-150} duration={500} >contact</Link></li>
             <NavLink to='/SignIn' className='explore'smooth id="log" name="log" onChange={(e)=>e.target.value}>sign In</NavLink>
-            <li className="profileData"><Link to='/'><img id="photoImg" ></img></Link>
+            <li className="profileData"><img id="photoImg" ></img>
             <span id='userName'></span></li>
         </ul>
 

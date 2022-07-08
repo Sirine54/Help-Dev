@@ -14,29 +14,19 @@ import {Routes,Route} from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      
-      {/* <BrowserRouter>
-      <Header/>
-      <Home/>
-      <SignUp/>
-      <SignIn/>
-      </BrowserRouter> */}
+      <Routes>
+      <Route path='/SignIn' element={<SignIn/>}></Route>
+        <Route path='/SignUp' element={<SignUp/>}></Route>
+        </Routes>
   <Header/>
 
-      {/* <SignUp/>
-      <SignIn/> */}
-    
-      {/* 
-      
-         */
    <Routes>
         <Route path='/' element={<Home/>}></Route>
-        <Route path='/SignIn' element={<SignIn/>}></Route>
-        <Route path='/SignUp' element={<SignUp/>}></Route>
+      
       
 
       </Routes>
-      }
+      
     </div>
   );
 }
