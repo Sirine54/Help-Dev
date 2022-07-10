@@ -1,8 +1,6 @@
 import {React,useState} from 'react'
 import './Sign.css'
 import { Link, useNavigate} from 'react-router-dom'
-
-
 import {signInWithPopup,FacebookAuthProvider,GoogleAuthProvider,onAuthStateChanged, signInWithEmailAndPassword} from 'firebase/auth'
 import{auth} from '../../firebase-config'
 import google from "../../assets/google.png";
@@ -28,6 +26,7 @@ export default function SignIn() {
           //user.photoURL
           // alert( `Hello ${user.displayName}! User ID: ${user.uid} userPhoto:${user.photo}`)
           document.getElementById('log').style='display:none'
+        user.displayName=document.getElementById('userName').innerHTML
       
         //  document.getElementById('userName').innerHTML=`${user.displayName}`
   
@@ -115,13 +114,13 @@ export default function SignIn() {
         <div className="inputBox">
           <input className="email" type="email" onChange={(e) => setEmail(e.target.value)}/>
           <label>Email</label>
-          <small className="errorMessage"><i class="fa-solid fa-circle-exclamation"></i></small>
+          {/* <small className="errorMessage"><i class="fa-solid fa-circle-exclamation"></i></small> */}
         </div>
 
         <div className="inputBox">
           <input className="password" type="password" onChange={(e) => setPassword(e.target.value)}/>
           <label>Password</label>
-          <small className="errorMessage"><i class="fa-solid fa-circle-exclamation"></i></small>
+          {/* <small className="errorMessage"><i class="fa-solid fa-circle-exclamation"></i></small> */}
         </div>
 
      </div>

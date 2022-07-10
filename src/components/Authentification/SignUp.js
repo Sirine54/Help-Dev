@@ -1,10 +1,13 @@
 import {React,useState} from "react";
-// import { useFormik } from "formik";
+import { Formik, Form } from 'formik';
+import { TextField } from './TextField';
 import "./Sign.css";
 import google from "../../assets/google.png";
 import { Link ,useNavigate } from "react-router-dom";
 import {signInWithPopup,FacebookAuthProvider,GoogleAuthProvider,onAuthStateChanged,createUserWithEmailAndPassword} from 'firebase/auth'
 import{auth} from '../../firebase-config';
+import * as Yup from 'yup'
+import { useToast} from "@chakra-ui/react";
 
 
 
@@ -12,11 +15,14 @@ export default function SignUp() {
 
   const navigate = useNavigate();
 
+  const toast = new useToast()
 
-
+  
   // Sign up with regular email
 
   const signUp = (e)=>{
+ 
+  
     e.preventDefault()
 
   createUserWithEmailAndPassword(auth,email,password)
@@ -24,11 +30,7 @@ export default function SignUp() {
     const user=userCredential.user;
     navigate('/SignIn', { replace: true })
           console.log(user)
-        //   //user.photoURL
-        //   // alert( `Hello ${user.displayName}! User ID: ${user.uid} userPhoto:${user.photo}`)
-        //   document.getElementById('log').style='display:none'
-        //   // document.getElementById('photoImg').src=`${user.photoURL}`
-        //  document.getElementById('userName').innerHTML=name
+        
         
   }).catch((err)=>{
     console.log(err)
@@ -94,85 +96,94 @@ export default function SignUp() {
 
 const[name,setName]=useState("");
 const [email, setEmail] = useState("");
-
 const [password, setPassword] = useState("");
 
 
+const[user,setUser]=useState({name:'',email:'',password:''})
 
+// const handleChange=(e)=>{
+//   e.preventDefault();
+//   console.log("user created :",user)
+// }
 
     ///////////////Error Message///////////////////////// 
-    
+  
 
+  const validate = Yup.object({
+    
+    name:Yup.string()
+    .max(15,'Must be less than 15 characters')
+    .required('Username Required!'),
+    email:Yup.string()
+    .email('Email is invalid')
+    .required('Email Required!'),
+    password:Yup.string()
+    .min(6,'Password must be at least 6')
+    .required('Password Required')
+  })
+
+  const handleChange = (e) =>{
+   setUser({...user,[e.target.name]:e.target.value});
+  }
+  
 
   return (
 
     <>
       <Link to='/' spy={true} smooth={true}><h1 className="homePage">Home</h1></Link>
-    <form
-      className="form"
-      onSubmit={signUp}
+            {/* form validation */}
+   
+<Formik 
+
+
+  initialValues={{
+    name:'',
+    email:'',
+    password:''
+  }}
+  
+  validationSchema={validate}
+  onSubmit={signUp}
     >
-      <h1 className="sign-title">Sign up for free</h1>
+   {(props) => (
+
+        <Form className="form">
+            <h1 className="sign-title">Sign up for free</h1>
       <div className="btnGroup">
         <button className="facebook" onClick={signInWithFacebook}>
-          <i class="fa-brands fa-facebook"></i> Sign up with facebook
+        <i class="fa-brands fa-facebook"></i> Sign up with facebook
         </button>
         <button className="google" onClick={signInWithGoogle}>
           <img src={google} className="googleIcon"></img>Sign up with google
         </button>
       </div>
+
+
       <span className="divider">or</span>
       <h3>Sign up with your email address</h3>
-
-
-            {/* form validation */}
       
-      <div className="inputs">
-        <div className="inputBox">
-          <input className="name" type="text"  name='name' onChange={(e)=>setName(e.target.value)}
-          />
-          <label>UserName</label>
-           <small className="errorMessage"><i class="fa-solid fa-circle-exclamation"></i></small>
-        </div>
 
-    
+          <div className="inputs">
+              <TextField label="UserName" name="name" type="text" id="name" />
+              <TextField label="Email" name="email" type="email" id="email"/>
+              <TextField label="Password" name="password" type="password" id="password" /> 
 
-         <div className="inputBox">
-          <input className="email" type="email" name='email' onChange={(e)=>setEmail(e.target.value)} 
-    />
-          <label>Email</label>
-          <small className="errorMessage"><i class="fa-solid fa-circle-exclamation"></i></small>
-        </div>
 
-        {/* <div className="inputBox">
-          <input className="confirmEmail" type="email"  onChange={(e) => setConfirmEmail(e.target.value)}
-           />
-          <label>Confirm Email</label>
-          <small className="errorMessage"><i class="fa-solid fa-circle-exclamation"></i></small>
-        </div> */}
-        <div className="inputBox">
-          <input className="password" type="password"  onChange={(e) => setPassword(e.target.value)}
-           />
-          <label>Password</label>
-          <small className="errorMessage"><i class="fa-solid fa-circle-exclamation"></i></small>
-        </div>
+         
+          </div>
 
-        {/* <div className="inputBox">
-          <input className="confirmPassword" type="password"  onChange={(e) => setConfirmPassword(e.target.value)}
-           />
-          <label>Confirm Password</label>
-          <small className="errorMessage"><i class="fa-solid fa-circle-exclamation"></i></small>
-        </div> */}
-      </div>
-
-      <div className="btnSignGroup">
-        <button className="sign" type="submit">
-        <span className="text">Register</span>
+          <div className="btnSignGroup">
+          <button className="sign" type="submit">
+            <span className="text">Register</span>
         </button>
         <span>Already have an account  <Link to="/SignIn" className="linked">Sign in</Link></span>
-        
-      </div>
-    </form>
+          </div>
+        </Form>
+      )}
+    </Formik>
+
+
+
     </>
   );
 }

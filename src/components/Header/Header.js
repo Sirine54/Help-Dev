@@ -30,6 +30,7 @@ function Header() {
     <nav className={color ? 'nav-links-scroll':'nav-links'}>
         <div className="iconPart"><img src={code} className="icon" />
       <h3 id="devIconHelp">DevHelp</h3></div>
+      
         <ul className='header-lists'>
             <li><Link  activeClass="active" to={'#home'} spy={true} smooth={true} offset={-100} duration={500} >Home</Link></li>
             <li><Link activeClass="active" to="#about" spy={true} smooth={true} offset={-100} duration={500} >about</Link></li>

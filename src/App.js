@@ -7,6 +7,7 @@ import SignUp from './components/Authentification/SignUp';
 import SignIn from './components/Authentification/SignIn';
 import About from './components/About/About';
 import Explore from './components/Home/Explore';
+// import { ChakraProvider } from '@chakra-ui/react'
 
 import {Routes,Route} from 'react-router-dom'
 
@@ -14,11 +15,14 @@ import {Routes,Route} from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      <Routes>
-      <Route path='/SignIn' element={<SignIn/>}></Route>
-        <Route path='/SignUp' element={<SignUp/>}></Route>
-        </Routes>
-  <Header/>
+      
+   <Routes>
+        <Route path='/SignIn' element={<SignIn/>}></Route>
+          <Route path='/SignUp' element={<SignUp/>}></Route>
+    </Routes>
+        
+      
+  {/* <Header/> */}
 
    <Routes>
         <Route path='/' element={<Home/>}></Route>

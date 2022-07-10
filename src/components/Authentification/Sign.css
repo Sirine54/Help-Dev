@@ -58,31 +58,7 @@ color: white;
    flex-direction: column;
 
 }
-/* .inputBox:first-child{
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
-.inputBox:nth-child(2){
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
-.inputBox:nth-child(3){
-    grid-column:1/3;
-    grid-row: 2/3;
-}
-.inputBox:nth-child(4){
-    grid-column:1/3;
-    grid-row: 3/4;
-}
-.inputBox:nth-child(5){
-    grid-column:1/3;
-    grid-row: 4/5;
-}
-.inputBox:last-child{
-    grid-column:1/3;
-    grid-row: 5/-1;
-}
- */
+
 .inputBox{
     position: relative;
     margin: 17px;
@@ -105,14 +81,13 @@ input:focus{
 }
 .inputBox label{
     position: absolute;
-    top:-10px;
+    top:-23px;
     padding-left:2px;
     font-size: 16px;
     left:0px;
     z-index: 1;
-    color: black;
+    color: rgba(0, 0, 0, 0.781);
     font-weight: 600;
-    background-color: white;
     transition: top .5s;
 
     }
@@ -253,54 +228,30 @@ h3{
     z-index: 1;
     position: relative;
 }
-/* {
-    /* position: absolute;
-    left:0;
-    top:38px; */
-    /* padding-block: 15px;
-    color: rgb(171, 15, 15);
-    font-weight: 600;
-    font-size: 15px;
-    
-    
-} */ 
+
 
 .errorMessage{
     color: rgb(171, 15, 15);
     position: absolute;
     left:0;
     bottom:-10px;
-   display: block !important;
+    
+   font-weight: 600;
+   font-size: 14px;
 }
-
-/* .formControl.errorMessage{
-    color: rgb(171, 15, 15);
-    position: absolute;
-    left:0;
-    bottom:-10px;
-   display: none;
-} */
-
 
 
 .errorMessage .fa-circle-exclamation{
     visibility: visible;
     padding-right: 4px;
-}
-small{
-    position: absolute;
-    left:0;
-    top:10px;
-    color: rgb(157, 16, 16);
-    transform: translateY(3.2em);
     font-weight: 600;
-    visibility: visible;
-   
-}
-.errorMessage small{
-    visibility: visible;
+    font-size: 14px;
 }
 
+input.form-control, input.form-control:focus {
+    background: #F0F0FF;
+  }
+  
 .linked{
     color: rgb(37, 34, 111);
     line-height: 1.2em;
