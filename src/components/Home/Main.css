@@ -26,7 +26,7 @@
     padding: 15px;
     position: absolute;
     top:18%;
-    left:4em;
+    left:3em;
     display: flex;
     flex-direction: column;
 
@@ -67,29 +67,7 @@
     outline: 1px white solid;
     outline-offset: 4px;
 }
-/* .wordsDots{
-    display: flex;
-    flex-direction: column;
-}
-.words{
-    color:rgb(255, 255, 255);
-    font-size: 45px;
-    font-weight: 600;
 
-}
-.dots{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    color: rgba(255, 255, 255, 0.312);
-    font-size: 45px;
-    cursor: pointer;
-    bottom: 10px;
-    left:0;
-    right:0;
-
-} */
 .custom-shape-divider-bottom-1656941149 {
     position: absolute;
     bottom: -1px;

@@ -1,0 +1,117 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.contact{
+  margin-block: 45px;
+}
+ 
+.contact .part1{
+  padding-left: 55px;
+}
+.contactContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(194, 186, 186);
+  margin: 45px auto;
+  margin-block: 15%;
+}
+
+.section1 {
+
+    background: rgb(49, 23, 38) ;
+    padding: 25px 25px;
+  box-shadow: 1px 1px 10px black;
+  width: 500px;
+  height: 400px;
+  display: block;
+  flex-direction: column;
+  border-radius: 15px;
+  transform: translateX(-59%);
+
+}
+
+.section1 h1{
+    color: rgba(231, 229, 224, 0.778);
+    font-weight: 600;
+}
+.section1 form{
+    margin: 25px auto;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.name,
+.email,
+.message{
+  width: 100%;
+  background-color:rgba(255, 255, 255, 0.889);
+  color: rgb(58, 50, 51) ;
+  padding-block:10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.name:focus,
+.email:focus,
+.message:focus{
+  background-color:rgba(249, 247, 243, 0.77);
+ outline: none;
+}
+
+.name::placeholder,
+.email::placeholder,
+.message::placeholder{
+  color: rgba(0, 0, 0, 0.623);
+  padding-left: 5px;
+}
+.sendMessage{
+  width: 250px;
+  padding: 5px;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: none;
+box-shadow: 1px 1px 10px 1px rgba(199, 178, 178, 0.452);
+transition: .5s all;
+font-size: 18px;
+text-transform: uppercase;
+font-weight: 600;
+
+
+}
+.sendMessage:hover{
+  box-shadow: none;
+}
+.sendMessage:active{
+  outline: 1px white solid;
+  outline-offset: 4px;
+}
+
+.section2{
+  background-color: rgb(214, 203, 208);
+  height: 600px;
+  width: 600px;
+  z-index: -1;
+  position: absolute;
+  transform: translateX(36%);
+  border-radius: 25px;
+}
+.section2 h1{
+color:rgb(49, 23, 38) ;
+font-weight: 500;
+padding-top: 25px;
+}
+.mapBox{
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:500px; border-radius: 25px;border: 3px solid rgba(0, 0, 0, 0.381);}
+.mapouter{position:relative;text-align:right;height:500px;width:600px;display: flex; justify-content: center;
+align-items: center;}
+

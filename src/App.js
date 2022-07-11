@@ -5,31 +5,31 @@ import {
   BrowserRouter} from "react-router-dom";
 import SignUp from './components/Authentification/SignUp';
 import SignIn from './components/Authentification/SignIn';
-import About from './components/About/About';
-import Explore from './components/Home/Explore';
+
 // import { ChakraProvider } from '@chakra-ui/react'
 
 import {Routes,Route} from 'react-router-dom'
+import Profile from './components/Profile/Profile';
+import Footer from './components/Footer/Footer';
+import ScrollArrow from './components/Scroll/Scroll';
 
 
 function App() {
   return (
     <div className="App">
-      
+      {/* <Profile/> */}
+  
+  <Header />
    <Routes>
+       <Route path="/" element={<Home />}></Route>
         <Route path='/SignIn' element={<SignIn/>}></Route>
           <Route path='/SignUp' element={<SignUp/>}></Route>
+          
+          <Route path='/Profile' element={<Profile/>}></Route>
     </Routes>
-        
-      
-  {/* <Header/> */}
+     <ScrollArrow/>  
+ <Footer/>
 
-   <Routes>
-        <Route path='/' element={<Home/>}></Route>
-      
-      
-
-      </Routes>
       
     </div>
   );
