@@ -2,7 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
+
 .contact{
   margin-block: 45px;
 }
@@ -10,19 +12,21 @@
 .contact .part1{
   padding-left: 55px;
 }
+
 .contactContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(194, 186, 186);
+  color: rgb(194, 186, 191);
   margin: 45px auto;
   margin-block: 15%;
 }
 
 .section1 {
 
-    background: rgb(49, 23, 38) ;
-    padding: 25px 25px;
+  background: #1c0c0c;
+  backdrop-filter: blur(8px);
+  padding: 25px 25px;
   box-shadow: 1px 1px 10px black;
   width: 500px;
   height: 400px;
@@ -34,10 +38,10 @@
 }
 
 .section1 h1{
-    color: rgba(231, 229, 224, 0.778);
+    color: #ff6366;
     font-weight: 600;
 }
-.section1 form{
+.section1 .contact-form{
     margin: 25px auto;
     display: flex;
     align-items: left;
@@ -45,9 +49,9 @@
     flex-direction: column;
 }
 
-.name,
-.email,
-.message{
+.name1,
+.email1,
+.message1{
   width: 100%;
   background-color:rgba(255, 255, 255, 0.889);
   color: rgb(58, 50, 51) ;
@@ -55,16 +59,16 @@
   font-size: 16px;
   border-radius: 5px;
 }
-.name:focus,
-.email:focus,
-.message:focus{
+.name1:focus,
+.email1:focus,
+.message1:focus{
   background-color:rgba(249, 247, 243, 0.77);
  outline: none;
 }
 
-.name::placeholder,
-.email::placeholder,
-.message::placeholder{
+.name1::placeholder,
+.email1::placeholder,
+.message1::placeholder{
   color: rgba(0, 0, 0, 0.623);
   padding-left: 5px;
 }
@@ -76,14 +80,18 @@
   border: none;
 box-shadow: 1px 1px 10px 1px rgba(199, 178, 178, 0.452);
 transition: .5s all;
-font-size: 18px;
+font-size: 17px;
 text-transform: uppercase;
 font-weight: 600;
+display: flex;
+justify-content: center;
+align-items: center;
 
 
 }
 .sendMessage:hover{
   box-shadow: none;
+  background-color: #ff6366;
 }
 .sendMessage:active{
   outline: 1px white solid;

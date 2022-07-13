@@ -4,14 +4,18 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Josefin Sans', sans-serif;
+   
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
+
 .nav-links{
     /* background:rgba(11, 10, 16, 0.645); */
     color: white;
-    padding: 2% 10%;
+    padding: 1% 10%;
     display:flex;
+
     justify-content: space-between;
     align-items: center;
     /* padding:auto 6% ; */
@@ -24,9 +28,9 @@
 
 }
 .nav-links-scroll{
-    background-color:rgba(11, 10, 16, 0.645);
+    background-color:rgba(11, 10, 16, 0.962);
     color: white;
-    padding: 1% 9%;
+    padding:0 9%;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -38,6 +42,7 @@
     
     transition: .4s all;
     z-index: 1;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.716);
 }
 .icon{
     width: 40px;
@@ -47,6 +52,7 @@
 .iconPart{
     display:flex;
     align-items: center;
+    justify-content: center;
 }
 #devIconHelp{
     font-family: 'Dosis', sans-serif;
@@ -59,6 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0;
 }
 
 .header-lists li{
@@ -69,11 +76,12 @@
     
 }
 .header-lists li a{
- 
-    padding: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-inline: 15px;
     align-items: center;
     text-decoration: none;
     color: white;
+    font-weight: 300;
     font-size: 20px;
     text-transform: uppercase;
     transition: .2s all ease-in;
@@ -152,20 +160,26 @@
 }
 .menu-burger.open .menu-btn-burger::before{
     transform: rotate(45deg) translate(35px, -35px);
+   
 }
 .menu-burger.open .menu-btn-burger::after{
     transform: rotate(-45deg) translate(35px, 35px);
 }
 
 @media screen and (max-width:1063px) {
-    
+    .nav-links{
+      
+      max-width: 100%;
+      margin: 0;
+
+    }
     .header-lists{
         display:flex;
         flex-direction: column;
         line-height: 6em;
         background:radial-gradient(circle,#160d12,#000000f5);
-        /* border-top-left-radius: 50%; */
-        /* border-bottom-left-radius: 50%; */
+        /* border-top-left-radius: 50%; 
+        border-bottom-left-radius: 50%; */
         width: 100%;
         position: absolute;
         right: 0px;
@@ -176,7 +190,8 @@
         padding-top: 45px;
        
     }
-    .menu-burger{display: flex;
+    .menu-burger{
+        display: flex;
         z-index: 15;
     }
 

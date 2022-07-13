@@ -1,5 +1,6 @@
 import React from 'react'
 import './Services.css'
+import programming from '../../assets/programming.png'
 
 function Services() {
   return (
@@ -8,73 +9,57 @@ function Services() {
           <h1 className="titleSection">
             Services
           </h1>
-
-          <p className='detailsPart'>
-         Share your experience in development with your application,website,design,ideas... 
-         <br></br>
-         This website provide for your to share your thoughts and being inspired by others' works
-         
-          </p>
          
             
         </div>
-        <div className='par2'>
-        <ul class="cards">
-  <li>
-    <a href="" class="card">
-      <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
-      <div class="card__overlay">
-        <div class="card__header">
-          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-          <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" />
-          <div class="card__header-text">
-            <h3 class="card__title">Jessica Parker</h3>            
-            <span class="card__status">1 hour ago</span>
-          </div>
-        </div>
-        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
-      </div>
-    </a>      
-  </li>
-  <li>
-    <a href="" class="card">
-      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
-      <div class="card__overlay">        
-        <div class="card__header">
-          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
-          <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
-          <div class="card__header-text">
-            <h3 class="card__title">kim Cattrall</h3>
-            <span class="card__status">3 hours ago</span>
-          </div>
-        </div>
-        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
-      </div>
-    </a>
-  </li>
-  <li>
-    <a href="" class="card">
-      <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
-      <div class="card__overlay">
-        <div class="card__header">
-          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-          <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" />
-          <div class="card__header-text">
-            <h3 class="card__title">Jessica Parker</h3>
-            <span class="card__tagline">Lorem ipsum dolor sit amet consectetur</span>            
-            <span class="card__status">1 hour ago</span>
-          </div>
-        </div>
-        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
-      </div>
-    </a>
-  </li>
-   
-</ul>
+        <div className='part2-services'>
+            <ul className='service-lists'>
+              <div className="service-card">
+              <li>
+              <div className='icon-service'><ion-icon name="bulb-outline" role="img" class="md hydrated" aria-label="bulb outline"></ion-icon></div>
+              <div className='service-content'>
+                <h3>Idea and Topics</h3>
+                <p>Gaining ideas from experts and guide you to work smart</p>
+              </div>
+             </li>
+              </div>
+              <div className="service-card">
+              <li>
+              <div className='icon-service'><ion-icon name="rocket-outline" role="img" class="md hydrated" aria-label="rocket outline"></ion-icon></div>
+              <div className='service-content'>
+                <h3>Launching your Project</h3>
+                <p>Get ready to start your own project with technical experts guide and launching it</p>
+              </div>
+             </li>
+              </div>
+            </ul>
 
+        
 
-
+        <div className='figure'>
+          <img src={programming} alt="" srcset="" />
         </div>
+        <ul className='service-lists'>
+              <div className="service-card">
+              <li>
+              <div className='icon-service'><ion-icon name="terminal-outline" role="img" class="md hydrated" aria-label="terminal outline"></ion-icon></div>
+              <div className='service-content'>
+                <h3>Learning</h3>
+                <p>Have courses to study development from zero to hero</p>
+              </div>
+             </li>
+              </div>
+              <div className="service-card">
+              <li>
+              <div className='icon-service'><ion-icon name="code-slash-outline" role="img" class="md hydrated" aria-label="code slash outline"></ion-icon></div>
+              <div className='service-content'>
+                <h3>Development</h3>
+                <p>Give the opportunity to learn skills of coding</p>
+              </div>
+             </li>
+              </div>
+            </ul>
+            </div>
     </div>
   )
 }

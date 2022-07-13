@@ -12,7 +12,7 @@ export default function Explore() {
   return (
     <div className="exploreDiv" id="exploreDiv" data-aos="fade-right">
       <div className="part1">
-        <h1 className="titleSection">Why us ?</h1>
+        <h1 className="titleSection">What's Dev-Help</h1>
 
         <p className="detailsPart">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

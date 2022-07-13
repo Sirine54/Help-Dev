@@ -158,10 +158,10 @@ export default function SignUp() {
         <h1 className="sign-title">Sign up for free</h1>
         <div className="btnGroup">
           <button className="facebook" onClick={signInWithFacebook}>
-            <i class="fa-brands fa-facebook"></i> Sign up with facebook
+          <ion-icon name="logo-facebook"></ion-icon> Sign up with facebook
           </button>
           <button className="google" onClick={signInWithGoogle}>
-            <img src={google} className="googleIcon"></img>Sign up with google
+            <img src={google} className="googleIcon" alt="" srcset="" />Sign up with google
           </button>
         </div>
 

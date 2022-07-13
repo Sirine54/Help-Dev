@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,useRef} from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 import { HashLink as Link } from "react-router-hash-link";
@@ -6,6 +6,23 @@ import { HashLink as Link } from "react-router-hash-link";
 import code from "../../assets/code.png";
 
 function Header() {
+  const headerRef=useRef()
+
+
+  const menuBurgerOPen=(e)=>{
+    var btn = e.target;
+    if (!menuOpen) {
+      headerRef.current.style.transform =
+        "translateX(0)";
+      btn.classList.add("open");
+      menuOpen = true;
+    } else {
+      headerRef.current.style.transform =
+        "translateX(100%)";
+      btn.classList.remove("open");
+      menuOpen = false;
+    }
+  }
   //Change nav color when scrolling
   const [color, setColor] = useState(false);
   const changeColor = () => {
@@ -19,6 +36,7 @@ function Header() {
 
   let menuOpen = false;
 
+
   return (
     <nav className={color ? "nav-links-scroll" : "nav-links"}>
       <div className="iconPart">
@@ -26,7 +44,7 @@ function Header() {
         <h3 id="devIconHelp">DevHelp</h3>
       </div>
 
-      <ul className="header-lists">
+      <ul className="header-lists" ref={headerRef}>
         <li>
           <Link
             activeClass="active"
@@ -37,6 +55,19 @@ function Header() {
             duration={500}
           >
             Home
+          </Link>
+        </li>
+        
+        <li>
+          <Link
+            to="#services"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            services
           </Link>
         </li>
         <li>
@@ -53,14 +84,14 @@ function Header() {
         </li>
         <li>
           <Link
-            to="#services"
+            to="#blog"
             activeClass="active"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={-150}
             duration={500}
           >
-            services
+            blog
           </Link>
         </li>
         <li>
@@ -75,7 +106,7 @@ function Header() {
             contact
           </Link>
         </li>
-        <NavLink
+        {/* <NavLink
           to="/SignIn"
           className="explore"
           smooth
@@ -88,27 +119,12 @@ function Header() {
         <li className="profileData">
           <img id="photoImg"></img>
           <span id="userName"></span>
-        </li>
+        </li> */}
       </ul>
 
       <div
         className="menu-burger"
-        onClick={(e) => {
-          console.log(e.target);
-          var btn = e.target;
-          if (!menuOpen) {
-            document.querySelector(".header-lists").style.transform =
-              "translateX(0)";
-            btn.classList.add("open");
-            menuOpen = true;
-          } else {
-            document.querySelector(".header-lists").style.transform =
-              "translateX(100%)";
-            btn.classList.remove("open");
-
-            menuOpen = false;
-          }
-        }}
+        onClick={menuBurgerOPen}
       >
         <div className="menu-btn-burger"></div>
       </div>

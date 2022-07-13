@@ -1,5 +1,14 @@
+*,*::after,*::before{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
 
-
+.extra{
+display: flex;
+flex-direction: column;
+margin:45px;
+}
 
 /* .fade-in{
     position: relative;

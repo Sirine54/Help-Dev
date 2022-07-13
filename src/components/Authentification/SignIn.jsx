@@ -9,7 +9,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../../firebase-config";
-import google from "../../assets/google.png";
+import google from '../../assets/google.png';
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -111,10 +111,10 @@ export default function SignIn() {
           <h1 className="sign-title">Sign in for free</h1>
           <div className="btnGroup">
             <button className="facebook" onClick={signInWithFacebook}>
-              <i class="fa-brands fa-facebook"></i> Sign in with facebook
+            <ion-icon name="logo-facebook"></ion-icon> Sign in with facebook
             </button>
             <button className="google" onClick={signInWithGoogle}>
-              <img src={google} className="googleIcon"></img>Sign in with google
+              <img src={google} className="googleIcon" alt="" srcset="" />Sign in with google
             </button>
           </div>
           <span className="divider">or</span>

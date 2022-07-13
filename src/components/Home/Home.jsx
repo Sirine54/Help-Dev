@@ -9,14 +9,18 @@ import Contact from '../Contact/Contact'
 
 
 
+
 export default function Home() {
   return (
     <div id="home">
         <Main/>
+        <div className='extra'>
         <Explore/>
-        <About/>
         <Services/>
+        <About/>
         <Contact/>
+     
+        </div>
         
     </div>
   )

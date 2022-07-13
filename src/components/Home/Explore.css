@@ -1,5 +1,8 @@
+body{
+  background-color: white;
+}
 .exploreDiv {
-  margin: 6em auto;
+  padding-top:9%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -16,29 +19,35 @@
 
 .titleSection {
   position: relative;
-  font-size: 4em;
+  font-size: 2.5em;
   margin-bottom: 45px;
-  justify-content: flex-start;
-  margin-block-end: 1.2em;
-  display: block;
-  font-weight: 600;
+  justify-content: center;
+  display:flex;
+  align-items: center;
+ 
+  font-weight: 700;
   text-transform: uppercase;
   color: #544649;
 }
-.titleSection::after {
+.titleSection::before {
   content: "";
-  background: linear-gradient(
-    90deg,
-    rgba(63, 49, 49, 0.9531162806919643) 1%,
-    rgba(25, 45, 49, 1) 37%,
-    rgba(134, 116, 119, 1) 62%
-  );
-  width: 450px;
-  height: 8px;
+  background: rgba(0, 0, 0, 0.83);
+  width: 400px;
+  height: 4px;
   position: absolute;
+
   border-radius: 20px;
   bottom: -20px;
-  left: 0;
+ 
+}
+.titleSection::after{
+  content: '';
+  background-color: #ff6366;
+  height: 12px;
+  width:100px;
+  position: absolute;
+  bottom: -24px;
+  border-radius: 15px;
 }
 
 .detailsPart {
@@ -48,7 +57,8 @@
   font-size: 18px;
 }
 .part2 img {
-  width: 600px;
+  width: 450px;
+  padding: 12px;
   animation: wave 2s linear infinite alternate;
 }
 
