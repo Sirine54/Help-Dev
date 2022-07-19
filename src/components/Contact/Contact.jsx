@@ -79,7 +79,7 @@ function Contact() {
       <div className="contactContainer">
         <div className="section1">
           <h1>Keep in touch !</h1>
-          <p>For any suggestion or feedback send message here</p>
+          <p>For any suggestion or feedback please send message here</p>
           <form ref={form} onSubmit={checkInput} className="contact-form">
             <input
               className="name1"
@@ -89,7 +89,7 @@ function Contact() {
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-            ></input>
+            />
             <input
               className="email1"
               placeholder="Email"
@@ -98,7 +98,7 @@ function Contact() {
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-            ></input>
+            />
             <textarea
               className="message1"
               placeholder="Message"
@@ -106,7 +106,7 @@ function Contact() {
               name="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-            ></textarea>
+            />
 
             <button type="submit" className="sendMessage">
               send <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
@@ -115,12 +115,12 @@ function Contact() {
             </button>
           </form>
         </div>
-        <div className="section2">
+        {/* <div className="section2">
             <h1>You can find us here</h1>
             <div className="mapBox">
             <div class="mapouter"><div class="gmap_canvas"><iframe width="500" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=Tunisia&t=&z=7&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br/><a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div></div>
             </div>
-        </div>
+        </div> */}
       </div>
 
       <ToastContainer

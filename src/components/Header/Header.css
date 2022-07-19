@@ -24,13 +24,13 @@
     max-width: 100%;
     right:0;
     left: 0;
-    z-index: 20;
+    z-index: 999;
 
 }
 .nav-links-scroll{
     background-color:rgba(11, 10, 16, 0.962);
     color: white;
-    padding:0 9%;
+    padding: 0 10%;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -39,9 +39,8 @@
     max-width: 100%;
     right:0;
     left: 0;
-    
+    z-index: 999;
     transition: .4s all;
-    z-index: 1;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.716);
 }
 .icon{
@@ -91,7 +90,8 @@
 
 }
 .header-lists li a:hover{
-    color: rgb(150, 137, 131);
+    /* color: rgb(150, 137, 131); */
+    color: #ff6366;
     text-shadow: 1px 1px 1px 1px white;
 }
 
@@ -106,9 +106,10 @@
 }
 
 .header-lists li a.active{
-    color: rgb(80, 73, 70);
+    /* color: rgb(80, 73, 70); */
+    color: #ff6366;
     font-weight: 900;
-    background-color: rgba(255, 255, 255, 0.6);
+    /* background-color: rgba(255, 255, 255, 0.6); */
 }
 
 .menu-burger{

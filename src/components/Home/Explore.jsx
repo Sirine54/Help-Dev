@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Explore.css";
-import laptop from "../../assets/laptop.png";
+import laptop from "../../assets/laptop.svg";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -38,9 +38,9 @@ export default function Explore() {
           </div>
         </div>
       </div>
-      <div className="part2">
-        <img src={laptop}></img>
-      </div>
+      <div>
+        <img src={laptop} alt="laptop" srcset=""  className="part2"/>
+        </div>
     </div>
   );
 }

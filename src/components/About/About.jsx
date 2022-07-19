@@ -10,7 +10,7 @@ export default function About() {
   return (
     <div id="about" data-aos="fade-up">
       <div className="part1">
-        <h1 className="titleSection">Techniques</h1>
+        <h1 className="titleSection">About us</h1>
 
         <p className="detailsPart">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

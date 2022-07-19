@@ -5,6 +5,7 @@ import Main from './Main'
 import About from '../About/About'
 import Services from '../Services/Services'
 import Contact from '../Contact/Contact'
+import Offers from '../Offers/Offers'
 
 
 
@@ -17,11 +18,12 @@ export default function Home() {
         <div className='extra'>
         <Explore/>
         <Services/>
+        <Offers id="offers"/>
         <About/>
-        <Contact/>
+        
      
         </div>
-        
+        <Contact/>
     </div>
   )
 }

@@ -3,17 +3,17 @@
 export const sliderData = [
     {
      
-      heading: "Slide One",
-      desc: "This is the description of slide one Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.",
+      heading: "Development",
+      desc: "Start your career in development",
     },
     {
     
-      heading: "Slide Two",
-      desc: "This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.",
+      heading: "Design",
+      desc: "Share your aesthetic thoughts",
     },
     {
       
-      heading: "Slide Three",
-      desc: "This is the description of slide three Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.",
+      heading: "Skills",
+      desc: "Your upcoming skills will guide you to an easy life",
     },
   ];

@@ -7,7 +7,7 @@ body{
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  width: 90%;
+
 }
 
 .part1 {
@@ -56,13 +56,15 @@ body{
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 18px;
 }
-.part2 img {
+
+img.part2{
   width: 450px;
-  padding: 12px;
-  animation: wave 2s linear infinite alternate;
+  padding:25px;
+  animation: wavy 2s linear infinite alternate;
+  
 }
 
-@keyframes wave {
+@keyframes wavy {
   0% {
     transform: translate(0, 0) rotate(0);
   }
@@ -78,16 +80,17 @@ body{
   text-align: center;
 }
 
-.box {
+.detailsExample .box {
   line-height: 1.5em;
-  background-color: transparent;
+  background-color: black;
   /* box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.211); */
   padding-block: 15px;
-  padding-inline: 25px;
+  padding-inline: 15px;
   border-radius: 5px;
-  backdrop-filter: blur(8px);
   transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   cursor: pointer;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* .box:hover{
@@ -100,5 +103,24 @@ body{
 }
 .box span {
   font-weight: 600;
-  color: #3f2121;
+  color: white;
 }
+
+
+@media screen and (max-width: 950px) {
+  .box {
+    max-height: 100px;
+    width: 120px;
+  }
+  
+}
+  @media screen and (max-width: 870px) {
+    .exploreDiv{
+      display: flex;
+      flex-direction: column;
+    }
+    .box {
+      max-height: 100px;
+    }
+  }
+  @media screen and (max-width: 768px) {}

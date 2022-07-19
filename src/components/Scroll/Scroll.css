@@ -14,21 +14,27 @@
     animation: fadeIn 0.3s;
     transition: opacity 0.4s;
     opacity: 0.7;
-    color: rgba(59, 41, 36, 0.742);
- 
+    color: #ff6366;
    
   }
   
+
   .scrollTop:hover{
     opacity: 1;
   }
   
   @keyframes fadeIn {
-    0% {
+    /* 0% {
       opacity: 0;
     }
     100% {
       opacity: 0.5;
+    } */
+    0%{
+      transform: translateX(200%);
+    }
+    100%{
+      transform: translateX(0%);
     }
   }
   

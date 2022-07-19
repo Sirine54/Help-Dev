@@ -6,21 +6,38 @@ import { HashLink as Link } from "react-router-hash-link";
 import code from "../../assets/code.png";
 
 function Header() {
+  const [hide, setHide] = useState(false);
   const headerRef=useRef()
 
+//   const lists = document.querySelectorAll('.header-lists li');
+//  lists.forEach((list)=>{
+//     list.onClick()
+//  })
+  // console.log(list)
+  // list.forEach(list=>{
+  //   list.onClick()
+  // })
+
+  let menuOpen = false;
 
   const menuBurgerOPen=(e)=>{
     var btn = e.target;
     if (!menuOpen) {
+      setHide(false);
       headerRef.current.style.transform =
         "translateX(0)";
-      btn.classList.add("open");
-      menuOpen = true;
+        menuOpen = true;
+      btn.classList.add('open');
+      
+      console.log(hide)
     } else {
+      setHide(true);
       headerRef.current.style.transform =
         "translateX(100%)";
-      btn.classList.remove("open");
-      menuOpen = false;
+        menuOpen = false;
+      btn.classList.remove('open');
+     
+      
     }
   }
   //Change nav color when scrolling
@@ -33,8 +50,6 @@ function Header() {
     }
   };
   window.addEventListener("scroll", changeColor);
-
-  let menuOpen = false;
 
 
   return (
@@ -113,7 +128,7 @@ function Header() {
           id="log"
           name="log"
           onChange={(e) => e.target.value}
-        >
+      >
           sign In
         </NavLink>
         <li className="profileData">
