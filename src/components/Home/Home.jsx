@@ -18,7 +18,6 @@ export default function Home() {
         <div className='extra'>
         <Explore/>
         <Services/>
-        <Offers id="offers"/>
         <About/>
         
      

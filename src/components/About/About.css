@@ -18,9 +18,10 @@
  
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 #about .part1 {
-  width: 80%;
+  /* width: 80%; */
 }
 
 .row1-container ,

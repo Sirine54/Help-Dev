@@ -4,8 +4,8 @@
   font-family: "Josefin Sans", sans-serif;
 }
 :root {
-  --royal-blue-dark: rgb(39, 23, 62);
-  --purple: hsl(291, 54%, 33%);
+  --royal-blue-dark: rgb(1, 1, 1);
+  --purple: hsl(290, 43%, 23%);
   --peachy-color: hsl(359, 100%, 69%);
   --gradient-1: linear-gradient(
     90deg,
@@ -201,7 +201,15 @@ img.engineer {
   fill: #ffffff;
 }
 
-
+@media screen and (max-width:1192px){
+ 
+  .container{
+      display: grid;
+      grid-template-columns:1fr 1fr;
+      max-width: 95%;
+  }
+  
+  }
 
 @media screen and (max-width: 1063px) {
  .header {
@@ -216,8 +224,9 @@ img.engineer {
     padding-inline: 45px;
   }
   .titleHeader{
-    top:30%;
+    top: 18%;
     max-width: 40%;
+    line-height: 2em;
   }
   img.engineer {
    
@@ -225,41 +234,47 @@ img.engineer {
   }
   
   .quote {
-    font-size: 20px;
+    font-size: 18px;
   }
   #h1 {
-    font-size: 3em;
+    font-size: 2.4em;
   }
   .titleHeader > small {
-    font-size: 20px;
+    font-size: 18px;
   }
   
 }
 
 @media screen and (max-width: 980px) {
-   
+ 
+   .container{
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr;
+   }
+      
    
       .custom-shape-divider-bottom-1658255558 svg {
         position: relative;
         display: block;
         width: calc(156% + 1.3px);
-        height: 200px;
+        height: 100px;
       }
       .titleHeader{
         top:20%;
-        max-width: 100%;
+        max-width: 60%;
       }
       .quote {
-        font-size: 20px;
+        font-size: 18px;
       }
-      #h1 {
-        font-size: 3em;
+      .titleHeader #h1{
+        font-size: 2em;
       }
       img.engineer {
         position: absolute;
-        bottom: 0;
-        left: 0;
-   width: 100%;
+        top:20%;
+        right: 0;
+     width: 40%;
       }
       .btn {
         font-size: 15px;
@@ -274,21 +289,16 @@ img.engineer {
   }
  
 }
+
 @media screen and (max-width: 768px) {
   
  .container{
-  display: flex;
-  flex-direction: column;
-  padding-inline: 15px;
-  max-width: 550px;
-  margin-inline: auto;
-  justify-content: center;
-  align-items: center;
-
+ 
+max-width: 99%;
  }
 
     img.engineer {
-   bottom: 12%;
+   bottom: 2%;
       position: absolute;
       display: block;
       align-items: center;
@@ -300,7 +310,7 @@ img.engineer {
       display: flex;
       flex-direction: column;
     top: 12%;
-      max-width: 100%;
+      max-width: 405px;
       text-align: left;
     
       line-height: 3.1em;
@@ -308,15 +318,18 @@ img.engineer {
     .quote{
       font-size: 20px;
     }
+   
     .container .btnGroup{
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       font-size: 25px;
-     
+      max-width: 100%;
     }
     .btn{
       width: 100%;
-      padding-block: 15px;
+      padding-block: 10px;
     }
     #h1 {
       font-size: 3em;
@@ -339,16 +352,30 @@ img.engineer {
     grid-column: 1/-1;
     grid-row: 1/2;
    max-width: 90%;
+   line-height: 1.3em;
+  }
+  .titleHeader #h1{
+    font-size: 1.4em;
+  }
+  .titleHeader small,
+   .quote{
+    font-size: 12px;
+  }
+  .btn{
+    width: 100%;
+    padding-block: 5px;
   }
   img.engineer {
+    padding-top: 2%;
   position: relative;
   grid-column: 1/-1;
    grid-template-rows: 2/-1;
+   width: 80%;
   }
 
 }
 
-@media screen and (max-width: 375px){
+/* @media screen and (max-width: 375px){
   .container{
     display: grid;
   }
@@ -358,10 +385,5 @@ img.engineer {
     grid-column: 1/-1;
     grid-row: 1/2;
   }
-  img.engineer {
-  position: absolute;
-  grid-column: 1/-1;
-   grid-template-rows: 2/-1;
-   bottom: 0;
-  }
-}
+
+} */

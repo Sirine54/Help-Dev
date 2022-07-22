@@ -13,6 +13,7 @@ body{
   
 }
 .App {
+
   text-align: center;
 }
 
@@ -44,7 +45,11 @@ background-color: rgb(68, 60, 58);
   }
 }
 
+.loading_page{
+  margin: 5% auto;
+display: block;
 
+}
 
 .App-link {
   color: #61dafb;

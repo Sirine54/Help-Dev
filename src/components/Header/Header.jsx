@@ -1,5 +1,5 @@
-import React, { useState, useEffect ,useRef} from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState,useRef} from "react";
+// import { NavLink } from "react-router-dom";
 import "./Header.css";
 import { HashLink as Link } from "react-router-hash-link";
 
@@ -121,6 +121,7 @@ function Header() {
             contact
           </Link>
         </li>
+        
         {/* <NavLink
           to="/SignIn"
           className="explore"

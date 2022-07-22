@@ -13,16 +13,10 @@ export default function About() {
         <h1 className="titleSection">About us</h1>
 
         <p className="detailsPart">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          An organization built in 2012 by person1,person2,person3 
         </p>
       </div>
-
+{/* 
       <div className="row1-container">
         <div className="box box-down cyan">
           <h2>Search</h2>
@@ -61,7 +55,7 @@ export default function About() {
           <p>Regularly evaluates our talent to ensure quality</p>
           <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="" />
         </div>
-      </div>
-    </div>
+      </div>*/}
+    </div> 
   );
 }

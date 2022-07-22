@@ -169,8 +169,8 @@
 
 @media screen and (max-width:1063px) {
     .nav-links{
-      
-      max-width: 100%;
+    
+      width: 100%;
       margin: 0;
 
     }
@@ -196,4 +196,33 @@
         z-index: 15;
     }
 
+}
+
+@media screen and (max-width:400px) {
+    .header-lists{
+        line-height: 4.2em;
+        background-color: #ff6366;
+    }
+    .menu-btn-burger::before{
+        transform: translateY(10px);
+    }
+    .menu-btn-burger::after{
+        transform: translateY(-10px);  
+    }
+    .menu-btn-burger,
+    .menu-btn-burger::before,
+    .menu-btn-burger::after{
+      
+        width: 35px;
+        height: 3px;
+       
+    }
+    .menu-burger.open .menu-btn-burger::before{
+        transform: rotate(45deg) translate(25px, -25px);
+       
+    }
+    .menu-burger.open .menu-btn-burger::after{
+        transform: rotate(-45deg) translate(25px, 25px);
+    }
+    
 }
