@@ -3,7 +3,8 @@ import "./Footer.css";
 import {GiPositionMarker} from "react-icons/gi"
 import {MdEmail} from "react-icons/md"
 import {BsFillTelephoneFill,BsSuitHeartFill} from "react-icons/bs"
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
+
 import code from "../../assets/code.png";
 
 function Footer() {

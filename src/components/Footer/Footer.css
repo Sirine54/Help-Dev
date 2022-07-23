@@ -51,8 +51,8 @@ border-radius: 50%;
 transition: .5s all ease-out;
 }
 .footer_part1 li >ion-icon:hover{
-    color:var(--red);
-    border: 2px solid var(--red);
+    color:var(--dark-orange);
+    border: 2px solid var(--dark-orange);
     transform: scale(1.1);
 }
 
@@ -78,16 +78,16 @@ transition: .5s all ease-out;
 
 .footer_part2 li >a{
     text-decoration: none;
-    color: var(--red);
+    color:white ;
     font-size: 18px;
     text-transform: uppercase;
     display: block;
     transition: .5s all;
-    font-weight: 200;
+    font-weight: 300;
 
 }
 .footer_part2 li a:hover{
-    color: white;
+    color: var(--dark-orange);
 }
 
 .footer_part3{

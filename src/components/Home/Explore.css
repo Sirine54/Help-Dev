@@ -42,7 +42,7 @@ body{
 }
 .titleSection::after{
   content: '';
-  background-color: #ff6366;
+  background-color: var(--dark-orange);
   height: 12px;
   width:100px;
   position: absolute;
@@ -96,10 +96,11 @@ img.part2{
 /* .box:hover{
     transform: scale(1.05);
   } */
-.box h5 {
+.box .h5 {
   font-size: 18px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #ff6366;
+  color: var(--dark-orange);
+  font-weight: 300;
 }
 .box span {
   font-weight: 600;

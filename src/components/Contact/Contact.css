@@ -50,7 +50,7 @@
   width: 100%;
 }
 .contactContainer h1{
-    color: var(--red);
+    color: var(--dark-orange);
     font-weight: 600;
 }
 .contactContainer p{
@@ -124,7 +124,7 @@ left:5px;
 }
 .sendMessage:hover{
   box-shadow: none;
-  background-color: #ff6366;
+  background-color: var(--dark-orange);
   color: white;
 }
 .sendMessage:active{

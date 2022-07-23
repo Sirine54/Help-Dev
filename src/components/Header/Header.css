@@ -91,7 +91,7 @@
 }
 .header-lists li a:hover{
     /* color: rgb(150, 137, 131); */
-    color: #ff6366;
+    color: var(--dark-orange);
     text-shadow: 1px 1px 1px 1px white;
 }
 
@@ -107,7 +107,7 @@
 
 .header-lists li a.active{
     /* color: rgb(80, 73, 70); */
-    color: #ff6366;
+    color: var(--dark-orange);
     font-weight: 900;
     /* background-color: rgba(255, 255, 255, 0.6); */
 }
@@ -201,7 +201,7 @@
 @media screen and (max-width:400px) {
     .header-lists{
         line-height: 4.2em;
-        background-color: #ff6366;
+        background-color: var(--dark-orange);
     }
     .menu-btn-burger::before{
         transform: translateY(10px);

@@ -4,6 +4,7 @@ import laptop from "../../assets/laptop.svg";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
+import CountUp from 'react-countup';
 
 export default function Explore() {
   useEffect(() => {
@@ -25,15 +26,24 @@ export default function Explore() {
         </p>
         <div className="detailsExample">
           <div className="box">
-            <h5>64464</h5>
+            <h5><CountUp 
+            start={0}
+            end={40250}
+            duration={60} className='h5'/></h5>
             <span>subscribers</span>
           </div>
           <div className="box">
-            <h5>125700</h5>
+            <h5><CountUp 
+            start={0}
+            end={12}
+            duration={0.9} className='h5' suffix="M"/></h5>
             <span>applications</span>
           </div>
           <div className="box">
-            <h5>10</h5>
+            <h5><CountUp 
+            start={0}
+            end={10}
+            duration={.7} className='h5' /></h5>
             <span>years of work</span>
           </div>
         </div>
