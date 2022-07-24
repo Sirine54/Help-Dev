@@ -2,6 +2,10 @@ import { React, useEffect } from "react";
 import "./About.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import coding from '../../assets/coding.jpg'
+import data from '../../assets/about/data.png'
+import experts from '../../assets/about/experts.png'
+import learning from '../../assets/about/online-learning.png'
 
 export default function About() {
   useEffect(() => {
@@ -9,53 +13,43 @@ export default function About() {
   }, []);
   return (
     <div id="about" data-aos="fade-up">
-      <div className="part1">
-        <h1 className="titleSection">About us</h1>
-
-        <p className="detailsPart">
-          An organization built in 2012 by person1,person2,person3 
+       <h1 className="titleSection">About Help-Dev</h1>
+       <div className="aboutParts">
+      <div className="part1 AboutImg">
+      
+        {/* <div className="AboutImg"></div> */}
+       
+      </div>
+     
+      <div className="part2">
+      <p className="detailsPart">
+          An organization built in 2012 to help for building skills,guiding students to start in the right way for their career
         </p>
-      </div>
-{/* 
-      <div className="row1-container">
-        <div className="box box-down cyan">
-          <h2>Search</h2>
-          <p>Monitors activity to identify project roadblocks</p>
-          <img
-            src="https://assets.codepen.io/2301174/icon-supervisor.svg"
-            alt=""
-          />
-        </div>
 
-        <div className="box red">
-          <h2>Team Work</h2>
-          <p>
-            Scans our talent network to create the optimal team for your project
-          </p>
-          <img
-            src="https://assets.codepen.io/2301174/icon-team-builder.svg"
-            alt=""
-          />
+        <div className="cardAbout">
+          <img src={data} alt=""  className="cardAbout_img"/>
+          <div className="AboutDescription">
+          <h1 className="cardAbout_title">Programming courses</h1>
+          <p className="cardAbout_description"> Choose your course suits your career and start learning any time you like</p>
+          </div>
         </div>
-
-        <div className="box box-down blue">
-          <h2>Code</h2>
-          <p>
-            Uses data from past projects to provide better delivery estimates
-          </p>
-          <img
-            src="https://assets.codepen.io/2301174/icon-calculator.svg"
-            alt=""
-          />
+        <div className="cardAbout">
+        <img src={learning} alt=""  className="cardAbout_img"/>
+        <div className="AboutDescription">
+          <h1 className="cardAbout_title">Certification and more </h1>
+          <p className="cardAbout_description">gain your Certification and earn more offer choosing by you ,start your own project with experts or start new course for free</p>
+          </div>
+        </div>
+        <div className="cardAbout">
+        <img src={experts} alt=""  className="cardAbout_img"/>
+        <div className="AboutDescription">
+          <h1 className="cardAbout_title">Experts support </h1>
+          <p className="cardAbout_description">Take advantage of gaining experience from great experts that will support you during your project</p>
+          </div>
+        </div>
         </div>
       </div>
-      <div className="row2-container">
-        <div className="box orange">
-          <h2>Ideas</h2>
-          <p>Regularly evaluates our talent to ensure quality</p>
-          <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="" />
-        </div>
-      </div>*/}
+
     </div> 
   );
 }

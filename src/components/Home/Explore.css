@@ -4,13 +4,19 @@ body{
 .exploreDiv {
   padding-top:9%;
   display: flex;
-  flex-direction: row-reverse;
+
   justify-content: center;
   align-items: center;
 
 }
 
-.part1 {
+.partExp{
+  background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('../../assets/contactBack.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 35vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -50,20 +56,13 @@ body{
   border-radius: 15px;
 }
 
-.detailsPart {
-  color: black;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 18px;
+.iconExp{
+  width: 48px;
+  filter:  brightness(0) invert(1);
+
 }
 
-img.part2{
-  width: 450px;
-  padding:25px;
-  animation: wavy 2s linear infinite alternate;
-  
-}
-
+/* 
 @keyframes wavy {
   0% {
     transform: translate(0, 0) rotate(0);
@@ -71,9 +70,10 @@ img.part2{
   100% {
     transform: translate(2px, 2px) rotate(1deg);
   }
-}
+} */
 
 .detailsExample {
+ 
   display: flex;
   justify-content: space-evenly;
   margin-top: 25px;
@@ -82,7 +82,7 @@ img.part2{
 
 .detailsExample .box {
   line-height: 1.5em;
-  background-color: black;
+  background-color:transparent;
   /* box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.211); */
   padding-block: 15px;
   padding-inline: 15px;
@@ -97,14 +97,16 @@ img.part2{
     transform: scale(1.05);
   } */
 .box .h5 {
-  font-size: 18px;
+  font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: var(--dark-orange);
   font-weight: 300;
 }
 .box span {
+  font-size: 25;
   font-weight: 600;
   color: white;
+  text-transform: capitalize;
 }
 
 

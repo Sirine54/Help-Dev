@@ -29,9 +29,9 @@
 .homePage::before{
     content: '';
     background-color:hsla(38, 67%, 22%, 0.384);
-    width: 100%;
+    width: 0;
     right:0;
-    height:0;
+    height:3px;
     border-radius: 12px;
     position: absolute;
     bottom: -4px;
@@ -41,11 +41,9 @@
 
 .homePage:hover::before{
     
-    height:80px;
+    width: 100%;
 }
-.homePage:hover{
-color: white;
-}
+
 .inputsSignIn{
     display: flex;
     flex-direction: column;

@@ -6,6 +6,8 @@ import About from '../About/About'
 import Services from '../Services/Services'
 import Contact from '../Contact/Contact'
 import Offers from '../Offers/Offers'
+import Payment from '../Payment/Payment'
+import Testimonials from '../Testimonials/Testimonials'
 
 
 
@@ -16,11 +18,12 @@ export default function Home() {
     <div id="home">
         <Main/>
         <div className='extra'>
+        <About/>
         <Explore/>
         <Services/>
-        <About/>
-        
-     
+        <Testimonials/>
+        {/* <Payment/> */}
+        <Offers/>
         </div>
         <Contact/>
     </div>

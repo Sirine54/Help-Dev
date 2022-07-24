@@ -1,6 +1,6 @@
 import React from 'react'
 import './Services.css'
-import programming from '../../assets/programming.png'
+import programming from '../../assets/programming.svg'
 
 function Services() {
   return (

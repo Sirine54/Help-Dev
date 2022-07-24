@@ -5,14 +5,14 @@ import Home from './components/Home/Home';
 import SignUp from './components/Authentification/SignUp';
 import SignIn from './components/Authentification/SignIn';
 import NoInternet from './components/NoInternet/NoInternet';
-
 import {Routes,Route} from 'react-router-dom'
+
 import Footer from './components/Footer/Footer';
 import ScrollArrow from './components/Scroll/Scroll';
 import { DotLoader } from 'react-spinners';
 import Payment from './components/Payment/Payment';
-import Success from './components/Payment/Success';
-import Cancel from './components/Payment/Cancel';
+import Cancel from './components/Payment/Cancel'
+
 
 
 function App() {
@@ -22,7 +22,7 @@ useEffect(()=>{
   setLoading(true)
   setTimeout(()=>{
     setLoading(false)
-  },2500)
+  },0)
 
 },[])
   return (
@@ -32,7 +32,7 @@ useEffect(()=>{
 <DotLoader
 className='loading_page'
 size={200}
-color={"var(--red)"}
+color={"var(--dark-orange)"}
 loading={loading}
 />
   :
@@ -43,9 +43,9 @@ loading={loading}
           <Route path="/" element={<Home />}></Route>
           <Route path='/SignIn' element={<SignIn/>}></Route>
           <Route path='/SignUp' element={<SignUp/>}></Route> 
+          <Route path='/Cancel' element={<Cancel/>}></Route>
           {/* <Route index element={<Payment />} />
-          <Route path="success" element={<Success/>} />
-          <Route path="cancel" element={<Cancel/>} /> */}
+          */}
 
     </Routes>
    
