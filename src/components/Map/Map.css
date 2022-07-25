@@ -1,0 +1,46 @@
+.mapContainer{
+   position: relative;
+   width:100%;
+   height: 62vh;
+}
+
+.loading{
+    visibility: hidden;
+    position: relative;
+    max-height:20px ;
+}
+
+.loading::before{
+    content: 'loading';
+    visibility: visible;
+    color:inherit;
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    animation: dot .8s infinite ;
+}
+
+@keyframes dot {
+
+    0%{
+        content: 'loading';
+    }
+    50%{
+        content: 'loading .';
+
+    }
+    70%{
+        content: 'loading ..';
+    }
+    100%{
+        content:'loading ...' ;
+    }
+    
+}
+
+@media screen and (max-width:1142px) {
+    .mapContainer{
+        height: 32vh;
+     }
+}

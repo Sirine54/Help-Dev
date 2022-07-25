@@ -1,0 +1,72 @@
+.testimonial{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+   
+}
+.sliderTest{
+    width: 50%;
+    text-align: center;
+    margin-bottom: 10%;
+}
+.cardTest{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+   
+}
+.titleCard{
+    color: var(--dark-orange);
+    font-weight: 500;
+}
+.cardTest p{
+    color: var(--black--shade);
+}
+
+
+
+.testimonial .slick-arrow.slick-prev,
+.testimonial .slick-arrow.slick-next {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.testimonial .slick-prev::before,
+.testimonial .slick-next::before {
+  display: none;
+}
+.testimonial .slick-arrow.slick-next {
+  right: -70px;
+}
+.testimonial .slick-arrow.slick-prev {
+  left: -70px;
+}
+.testimonial .slick-dots li button:before {
+  font-size: 15px;
+}
+.testimonial .slick-dots li {
+  top: 15px;
+}
+
+
+.quoteIcon{
+  position: absolute;
+  top:32%;
+  margin-left: 54px;
+  font-size: 25px;
+  z-index: 4;
+  background-color: rgba(255, 255, 255, 0.886);
+  border-radius: 50%;
+  padding: 2px;
+  color:var(--dark-orange);
+}
+

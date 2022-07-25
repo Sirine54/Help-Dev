@@ -1,0 +1,23 @@
+#job{
+    background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(117, 114, 114, 0.329)),url('../../assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg') ;
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
+    margin-block: 4%;
+}
+.jobCard{
+    margin:4% auto;
+}
+.jobCard h1{
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.484);
+}
+.jobCard p{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.889);
+}
+.btnJ{
+    padding: 15px;
+    font-size: 20px;
+}

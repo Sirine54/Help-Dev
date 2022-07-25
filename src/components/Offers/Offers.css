@@ -1,0 +1,68 @@
+
+#offers{
+    
+    width: 100%;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.618), rgba(0, 0, 0, 0.574)),url('../../assets/laptop.jpg'); */
+    background-position: center;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   
+    padding-inline: 0;
+}
+.offer_container{
+    display: flex;
+    flex-wrap: wrap;
+   align-items: baseline;
+ justify-content: center;
+}
+.offerBox{
+width: 400px;
+ border:1px solid var(--color-footer);
+ /* padding: 15px 10px; */
+ box-shadow: 0px 0px 25px 0px var(--color-footer);
+ margin: 1%;
+ border-radius: 10px;
+ display: grid;
+ grid-template-rows: 35px 80px 1fr 30px 50px;
+}
+.offerImg{
+    margin: auto;
+    width: 55px;
+    height:55px;
+    background-color: var(--dark-orange);
+    padding: 5px;
+    border-radius: 50%;
+}
+.offerBox h1{
+    color: var(--dark-orange);
+    font-size: 1.5em;
+    font-weight: 700;
+    padding-top: 8px;
+}
+.offerBox p{
+    color:var(--blue--shade);
+    font-size: 20px;
+    padding-block: 8px;
+    border-top: 1px solid var(--color-footer);
+}
+.offList{
+    text-align: left;
+    padding:18px 10px;
+    font-size: 16px;
+}
+.offIcon{
+padding-right: 5px;
+}
+.btnOff{
+    margin-top: 8px;
+    padding:8px 35px;
+    font-size: 18px;
+    text-transform: capitalize;
+    transition: .5s all ease-out;
+}
+.btnOff:hover{
+    box-shadow: 0px 0px 10px 0px var(--color-footer);
+    background-color: rgb(0, 0, 0);
+}
