@@ -83,14 +83,14 @@ function Footer() {
         <div>
         <li>
           <Link
-            to="#blog"
+            to="#testimonial"
             activeClass="active"
             spy={true}
             smooth={true}
             offset={-150}
             duration={500}
           >
-            blog
+            Testimonial
           </Link>
         </li>
         <li>

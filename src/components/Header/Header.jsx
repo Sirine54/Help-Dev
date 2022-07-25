@@ -4,6 +4,7 @@ import "./Header.css";
 import { HashLink as Link } from "react-router-hash-link";
 
 import code from "../../assets/code.png";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   const [hide, setHide] = useState(false);
@@ -72,19 +73,6 @@ function Header() {
             Home
           </Link>
         </li>
-        
-        <li>
-          <Link
-            to="#services"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            services
-          </Link>
-        </li>
         <li>
           <Link
             activeClass="active"
@@ -99,14 +87,27 @@ function Header() {
         </li>
         <li>
           <Link
-            to="#blog"
+            to="#services"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            services
+          </Link>
+        </li>
+        
+        <li>
+          <Link
+            to="#testimonial"
             activeClass="active"
             spy={true}
             smooth={true}
             offset={-150}
             duration={500}
           >
-            blog
+            Testimonial
           </Link>
         </li>
         <li>

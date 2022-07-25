@@ -32,7 +32,7 @@ function Main() {
           </h1>
           <small>HelpDev services available for everyone</small>
           <div className="btnGroup">
-            <Link to="#exploreDiv" className="explore btn" smooth>
+            <Link to="#about" className="explore btn" smooth>
               Discover
             </Link>
             <Link to="#contact" className="contactBtn btn" smooth>

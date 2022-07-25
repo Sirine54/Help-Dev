@@ -21,6 +21,9 @@
     background-color: black;
 
 }
+.footer h1{
+    color: rgb(56, 53, 53);
+}
 .footer .icon{
     width: 70px;
     height: 70px;

@@ -1,11 +1,19 @@
 import React from 'react'
 import './Services.css'
 import programming from '../../assets/programming.svg'
+import Offers from '../Offers/Offers'
 
 function Services() {
   return (
     <div className='service' data-aos="fade-right" id="services">
-       <div className='part1'>
+
+
+<Offers/>
+
+
+
+
+       {/* <div className='part1'>
           <h1 className="titleSection">
             Services
           </h1>
@@ -59,7 +67,7 @@ function Services() {
              </li>
               </div>
             </ul>
-            </div>
+            </div> */}
     </div>
   )
 }

@@ -12,6 +12,7 @@ import ScrollArrow from './components/Scroll/Scroll';
 import { DotLoader } from 'react-spinners';
 import Payment from './components/Payment/Payment';
 import Cancel from './components/Payment/Cancel'
+import Contact from './components/Contact/Contact';
 
 
 
@@ -40,11 +41,13 @@ loading={loading}
 <Header />
   
   <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path='/SignIn' element={<SignIn/>}></Route>
-          <Route path='/SignUp' element={<SignUp/>}></Route> 
+       <Route path="/" element={<Home />}></Route>
+          
+          {/* <Route path='/SignIn' element={<SignIn/>}></Route>
+          <Route path='/SignUp' element={<SignUp/>}></Route>  
           <Route path='/Cancel' element={<Cancel/>}></Route>
-          {/* <Route index element={<Payment />} />
+
+           <Route index element={<Payment />} />
           */}
 
     </Routes>

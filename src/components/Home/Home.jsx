@@ -8,7 +8,7 @@ import Contact from '../Contact/Contact'
 import Offers from '../Offers/Offers'
 import Payment from '../Payment/Payment'
 import Testimonials from '../Testimonials/Testimonials'
-
+import Job from '../Job/Job'
 
 
 
@@ -21,9 +21,10 @@ export default function Home() {
         <About/>
         <Explore/>
         <Services/>
+        <Job/>
         <Testimonials/>
         {/* <Payment/> */}
-        <Offers/>
+     
         </div>
         <Contact/>
     </div>

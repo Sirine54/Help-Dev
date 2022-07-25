@@ -8,7 +8,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import {Routes,Route} from 'react-router-dom'
 import Cancel from './components/Payment/Cancel';
 import Success from './components/Payment/Success';
+import Form from './components/Form/Form';
 // import SignIn from './components/Authentification/SignIn';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -18,7 +20,7 @@ root.render(
         <Route path="/" element={<App />}></Route>
         <Route path="/Cancel" element={<Cancel />} ></Route>
         <Route path="/Success" element={<Success />}></Route>
-    
+        <Route path="/Form" element={<Form/>}></Route>
       </Routes>
    
     </Router>
