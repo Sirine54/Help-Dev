@@ -113,12 +113,14 @@ img.engineer {
 .titleHeader .btnGroup {
     display: grid;
    grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr;
-   grid-gap:15%;
+   grid-template-rows: 1fr; 
+    grid-gap:15%;
+
     width: 60%;
     max-width: 100%;
     margin: auto;
  }
+
   .btn {
     margin-top: 5%;
     padding: 10px;
@@ -216,7 +218,7 @@ img.engineer {
   
   }
 
-@media screen and (max-width: 1063px) {
+/* @media screen and (max-width: 1063px) {
  .header {
     font-size: 22px;
     top: 22%;
@@ -248,16 +250,11 @@ img.engineer {
     font-size: 18px;
   }
   
-}
+} */
 
-@media screen and (max-width: 980px) {
+/* @media screen and (max-width: 980px) {
  
-   .container{
-    display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr;
-   }
-      
+
    
       .custom-shape-divider-bottom-1658255558 svg {
         position: relative;
@@ -285,66 +282,39 @@ img.engineer {
         font-size: 15px;
         padding-inline:85px;
       }
-}
-@media screen and (max-width: 956px) {
-  #h1 {
-    font-size: 3em;
+} */
+
+@media screen and (max-width: 708px) {
+  .container{
+    max-width: 100%;
+  }
+  .titleHeader .btnGroup{
+    display:flex;
+    flex-direction: column-reverse;
     width: 100%;
    
   }
- 
+  .container{
+    display: grid;
+   grid-template-columns: 1fr;
+   grid-template-columns: 1fr 1fr;
+  }
+  .titleHeader {
+    position: relative;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+   max-width: 90%;
+   line-height: 1.3em;
+  }
+  .titleHeader #h1{
+    font-size: 2.6em;
+  }
+  .titleHeader small,
+   .quote{
+    font-size: 18px;
+  }
 }
 
-@media screen and (max-width: 768px) {
-  
- .container{
- 
-max-width: 99%;
- }
-
-    img.engineer {
-   bottom: 2%;
-      position: absolute;
-      display: block;
-      align-items: center;
- 
-
-  padding-right: 0;
-    }
-    .titleHeader {
-      display: flex;
-      flex-direction: column;
-    top: 12%;
-      max-width: 405px;
-      text-align: left;
-    
-      line-height: 3.1em;
-    }
-    .quote{
-      font-size: 20px;
-    }
-   
-    .container .btnGroup{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 25px;
-      max-width: 100%;
-    }
-    .btn{
-      width: 100%;
-      padding-block: 10px;
-    }
-    #h1 {
-      font-size: 3em;
-      width: 100%;
-     }
-    .custom-shape-divider-bottom-1658255558 svg {
-      height: 100px;
-    }
-    
-}
 
 @media screen and (max-width: 445px) {
   .container{

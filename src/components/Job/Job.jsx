@@ -9,7 +9,7 @@ function Job() {
             <h1>Need a job?</h1>
             <p>Halp-Dev provide exclusive job opportunities for skilled people </p>
   
-            <NavLink to="/Form" className='contactBtn btnJ' smooth >Apply for The post</NavLink>
+            <NavLink to="/JobListing" className='contactBtn btnJ' smooth >Apply for The post</NavLink>
         </div>
     </div>
   )

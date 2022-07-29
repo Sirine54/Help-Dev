@@ -1,3 +1,40 @@
-.form{
+.formF{
     width: 100%;
+    margin:3% auto;
+    max-width: 800px;
+    box-shadow: 0px 0px 
+     10px 0px rgba(0, 0, 0, 0.515);
+     padding: 25px;
+}
+.btnF{
+    border:none;
+    background-color: var(--dark-orange);
+    color:white;
+    padding: 12px 32px;
+    border-radius: 5px;
+}
+.formDivider{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+   width: 100%;
+  
+}
+.formA{
+    width: 800px;
+}
+.imageF{
+width: 100%;
+align-items: center;
+display: block;
+}
+.photoControl::before{
+    content: '';
+    top: 0;
+    height:100%;
+    width: 200px;
+    position: absolute;
+    z-index: -1;
+    background-color: var(--dark-orange);
+
 }

@@ -6,7 +6,7 @@
 }
 
 .contact{
-  margin-top: 45px;
+  margin-block: 5%;
 
 }
  
@@ -15,19 +15,13 @@
 } */
 
 .contactContainer {
-  background: url("../../assets/hero-bg.png"),
-  linear-gradient(
-    90deg,
-    var(--royal-blue-dark) 0,
-    var(--purple) 51%,
-    var(--royal-blue-dark)
-  );
-  background-repeat: no-repeat, no-repeat;
-  background-position: center, center;
-  background-size: cover, auto;
+  background:linear-gradient(rgba(157, 144, 144, 0.777),rgba(149, 135, 135, 0.777)),url("../../assets/background.jpg"); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   width: 100%;
   color: rgba(255, 255, 255, 0.984);
@@ -36,14 +30,14 @@
 }
 
 .section1 {
-/* 
-  backdrop-filter: blur(8px); */
+background-color: rgba(2, 2, 2, 0.77);
   padding: 15px 25px;
-  width:100%;
+  margin-inline:4%;
+  width:80%;
  
   display: block;
   flex-direction: column;
-  border-radius: 15px;
+
 
 }
 .section2{
@@ -142,5 +136,11 @@ left:5px;
   .contactContainer {
     display: flex;
     flex-direction: column;
+  }
+}
+@media screen and (max-width:750px) {
+  .section1{
+    margin-inline: 0;
+    width: 100%;
   }
 }

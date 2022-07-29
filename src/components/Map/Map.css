@@ -1,6 +1,7 @@
 .mapContainer{
    position: relative;
-   width:100%;
+   width:90%;
+   float: right;
    height: 62vh;
 }
 
@@ -42,5 +43,11 @@
 @media screen and (max-width:1142px) {
     .mapContainer{
         height: 32vh;
+        width:90%;
      }
+}
+@media screen and (max-width:750px) {
+    .mapContainer{
+        width: 100%;
+    }
 }

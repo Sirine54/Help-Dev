@@ -1,51 +1,48 @@
-// This is a public sample test API key.
-// Don’t submit any personally identifiable information in requests made with this key.
-// Sign in to see your own test API key embedded in code samples.
-const stripe = require('stripe')('pk_test_51LOOVeEMYjbSpP698RkTD5E74eGPv8hODhOZChSpGqr62EtHkqV6mkdPCWPgRuIuyFTMZIFzvW6BKYzTVu6Siq4t007a9IsfeS');
+
+const stripe = require('stripe')(process.env.STRIPE_KEY);
 const express = require('express');
 const app = express();
 app.use(express.static('public'));
-
-const YOUR_DOMAIN = 'http://localhost:3000';
+require("dotenv")
+// const DOMAIN = 'http://localhost:3000';
 
 app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
+    payment_method_types: [
+      'card'
+    ],
     line_items:[
 
       {
-          // title:"Web UX/UI Design",
+         
           price:'{{PRICE_ID}}',
-          // api:"price_1LOQhVEMYjbSpP6970D1my56"
           quantity: 1,
   
       },
       
       {
-          // title:"Topic Leader",
-          price:'{{PRICE_ID}}',
-          // api:"price_1LOQgtEMYjbSpP69vqWXbODo"
-          quantity: 1,
-      }],
-
-
-      // ,
-      
-      // {
-      //     title:"Back-End Development",
-      //     price:"60.00",
-      //     api:"price_1LOQfREMYjbSpP69h97uMp6d"
-      // },
           
-      // {
-      //     title:"Front-End Development",
-      //     price:"60.00",
-      //     api:"price_1LOQeTEMYjbSpP69alABlGk1"
-      // },
+          price:'{{PRICE_ID}}',
+          quantity: 1,
+      },
+      {
+        
+          price:'{{PRICE_ID}}',
+          quantity: 1,
+      },
+          
+      {
+        
+           price:'{{PRICE_ID}}',
+           quantity: 1,
+      },
   
-  
-    mode: 'payment',
-    success_url: `${YOUR_DOMAIN}?success=true`,
-    cancel_url: `${YOUR_DOMAIN}?canceled=true`,
+    
+    ],    
+
+    mode: 'subscription',
+    success_url: `${process.env.DOMAIN_URL}?success=true`,
+    cancel_url: `${process.env.DOMAIN_URL}?canceled=true`,
   });
 
   res.redirect(303, session.url);

@@ -79,7 +79,8 @@ function Contact() {
 
       <div className="contactContainer">
 
-        <div className="section1">
+        <div className="section1" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
           <h1>Keep in touch !</h1>
           <p>For any suggestion or feedback please contact us</p>
           <form ref={form} onSubmit={checkInput} className="contact-form">

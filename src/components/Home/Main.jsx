@@ -27,7 +27,7 @@ function Main() {
             <span>– Kent Beck</span>
           </div>
           <h1 id="h1">
-            We lead you to the suitable path we provide opportunities to gain
+            We lead you to the suitable way and we provide opportunities to get new
             skills
           </h1>
           <small>HelpDev services available for everyone</small>
