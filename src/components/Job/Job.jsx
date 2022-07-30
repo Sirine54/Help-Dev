@@ -1,15 +1,18 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import './Job.css'
 import { NavLink } from 'react-router-dom'
+
 function Job() {
+ 
   return (
     <div id="job">
         <div className="jobCard">
             
             <h1>Need a job?</h1>
-            <p>Halp-Dev provide exclusive job opportunities for skilled people </p>
-  
+            <p>Halp-Dev provide exclusive job opportunities .Apply now! </p>
+        
             <NavLink to="/JobListing" className='contactBtn btnJ' smooth >Apply for The post</NavLink>
+      
         </div>
     </div>
   )

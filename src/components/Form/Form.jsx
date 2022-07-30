@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { storage } from '../../firebase-config';
 import firebase from '../../firebase-config';
 import {QuerySnapshot} from  "firebase/firestore";
@@ -21,6 +21,9 @@ import {
   uploadBytesResumable , getDownloadURL 
 } from "firebase/storage";
 import job from '../../assets/feeling.svg'
+import code from "../../assets/code.png";
+import { NavLink } from "react-router-dom";
+import { DotLoader } from "react-spinners";
 function Form() {
 
    
@@ -134,14 +137,56 @@ const add=()=>{
           }
       );
   };
+  const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
 
   return (
+    <>
+    {loading ? (
+      <DotLoader
+       className="loading_page"
+       size={150}
+       color={"var(--dark-orange)"}
+       loading={loading}
+     />
+) : (
+   <>
+        <div className='headerJob'>
+        <nav className= "nav-links-scroll">
+      <NavLink to="/" className="iconPart">
+        <img src={code} className="icon" />
+        <h3 id="devIconHelp">DevHelp</h3>
+      </NavLink>
+
+      <ul className="header-lists">
+    
+        <li>
+          <NavLink
+            activeClass="active"
+            to="/JobListing"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Back
+          </NavLink>
+        </li>
+      </ul>
+
+   
+    </nav>
+  </div>
+
     <div className='formF'>
-      <Link to="/" spy={true} smooth={true}>
-        <h1 className="homePage">Home</h1>
-      </Link>
+   
       <div className='formDivider'>
         
         <div className="formA">
@@ -155,9 +200,12 @@ const add=()=>{
         <Input type="email" placeholder='Email' id="email" onChange={(e) => setEmail(e.target.value)}/>
         <FormLabel>Education</FormLabel>
         <Input type="text" placeholder='Education' id="education" onChange={(e) => setEducation(e.target.value)}/>
+        <FormLabel>Position</FormLabel>
+        <Input type="text" placeholder='Position' id="position" onChange={(e) => setEducation(e.target.value)}/>
         <FormLabel>Phone Number</FormLabel>
         <Input type="phone" placeholder='Phone Number' id="phone" onChange={(e) => setPhone(e.target.value)}/>
 
+        <FormLabel>Drop your cv</FormLabel>
         <Input type="file"  accept='.doc,.docx,application/pdf' onChange={handleChange} id="file"/>
         <p>{percent}% done</p>
 
@@ -181,6 +229,9 @@ const add=()=>{
           draggable
           pauseOnHover/> 
         </div>
+        </>
+            )}
+        </>
   )
 }
 

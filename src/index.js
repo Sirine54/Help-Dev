@@ -21,6 +21,7 @@ root.render(
         <Route path="/Cancel" element={<Cancel />} ></Route>
         <Route path="/Success" element={<Success />}></Route>
         <Route path="/JobListing" element={<JobListing/>}></Route>
+        <Route path="/Form" element={<Form/>}></Route>
       </Routes>
    
     </Router>

@@ -1,15 +1,15 @@
 .formF{
     width: 100%;
-    margin:3% auto;
+    margin:5% auto;
     max-width: 800px;
     box-shadow: 0px 0px 
      10px 0px rgba(0, 0, 0, 0.515);
      padding: 25px;
 }
-.btnF{
+.formA .btnF{
     border:none;
-    background-color: var(--dark-orange);
-    color:white;
+    background-color:var(--dark-orange);
+    color:rgb(9, 9, 9);
     padding: 12px 32px;
     border-radius: 5px;
 }
@@ -22,6 +22,12 @@
 }
 .formA{
     width: 800px;
+}
+.formA h1{
+    font-size: 3rem;
+    font-weight:600 ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-block: 2%;
 }
 .imageF{
 width: 100%;

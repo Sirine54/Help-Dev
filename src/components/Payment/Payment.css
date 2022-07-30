@@ -1,10 +1,14 @@
 .messagePay{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
   text-align: center;
   margin: 5% auto;
 }
 .messagePay h1{
   font-weight: 600;
+  font-size: 3em;
 }
 #MdDoneAll{
   color: rgb(241, 241, 241);
