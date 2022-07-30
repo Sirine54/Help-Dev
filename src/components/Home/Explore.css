@@ -4,7 +4,7 @@ body{
 .exploreDiv {
   padding-top:9%;
   display: flex;
-
+  
   justify-content: center;
   align-items: center;
 
@@ -15,7 +15,7 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 35vh;
+  height:25vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -78,6 +78,7 @@ body{
   justify-content: space-evenly;
   margin-top: 25px;
   text-align: center;
+  height:100%;
 }
 
 .detailsExample .box {
@@ -90,7 +91,11 @@ body{
   transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   cursor: pointer;
   max-width: 100%;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
 }
 
 /* .box:hover{

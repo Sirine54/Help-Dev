@@ -126,7 +126,7 @@ function Footer() {
       </ul>
     </div>
     <div className="right_section">
-      <small>Copyright © 2012 -{new Date().getFullYear()} all right reserved. Made with <BsSuitHeartFill style={{color:'red'}}></BsSuitHeartFill> Sirine</small>
+      <small>Copyright © 2012 -{new Date().getFullYear()} all right reserved. Made with <BsSuitHeartFill style={{color:'darkRed',paddingInline:'5px',fontSize:'25px'}}></BsSuitHeartFill>  Sirine</small>
     </div>
     </>
   );

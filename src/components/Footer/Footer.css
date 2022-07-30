@@ -17,12 +17,14 @@
     width: 100%;
     display:grid;
     grid-template-columns:200px 1fr 1fr 1fr;
-    align-items: center;
+    align-items: left;
     background-color: black;
+    padding: 15px;
 
 }
 .footer h1{
     color: rgb(56, 53, 53);
+    font-size: 2.1em;
 }
 .footer .icon{
     width: 70px;
@@ -32,8 +34,10 @@
 font-size: 35px;
 }
 .footer_part1{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: left;
 
 }
 
@@ -46,7 +50,7 @@ font-size: 35px;
     
 }
 .footer_part1 li >ion-icon{
-    font-size: 18px;
+font-size: 18px;
 color:rgba(200, 195, 195, 0.767);
 padding: 10px;
 border: 2px solid rgba(200, 195, 195, 0.767);
@@ -63,26 +67,30 @@ transition: .5s all ease-out;
     /* display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows:1fr 1fr; */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
     text-align: justify;
     margin: auto;
-    grid-gap:45px;
+    /* grid-gap:45px; */
     line-height: 2.3em;
 }
 .menu_footer{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap:15px;
+  
 }
-.footer_part2 h1{
+/* .footer_part2 h1{
     padding-bottom: 0;
     grid-column: 1/-1;
     grid-row: 1fr;
-}
+} */
 
 .footer_part2 li >a{
     text-decoration: none;
     color:white ;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
     display: block;
     transition: .5s all;
@@ -94,11 +102,13 @@ transition: .5s all ease-out;
 }
 
 .footer_part3{
-    color: var(--color-footer);
-    margin: auto;
+color: var(--color-footer);
+margin: auto;
 display: flex;
 flex-direction: column;
+text-align: left;
 padding-block:25px;
+padding-top: 0;
 }
 .footer_part3 li{
    display: flex;
@@ -132,6 +142,12 @@ padding-block:25px;
     color:var(--color-footer);
     font-weight: 300;
     padding: 4px;
+    
+}
+.right_section small{
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width:1120px) {

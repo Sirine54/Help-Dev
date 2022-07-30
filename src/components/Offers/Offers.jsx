@@ -80,7 +80,7 @@ let redirectToCheckout;
 
   return (
     <div id="offers">
-      <h1>Available Courses</h1>
+      <h4>Available Courses</h4>
       <div className="offer_container">
         {offerData.map((offer,index) => {
          

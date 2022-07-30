@@ -24,6 +24,9 @@ import job from '../../assets/feeling.svg'
 import code from "../../assets/code.png";
 import { NavLink } from "react-router-dom";
 import { DotLoader } from "react-spinners";
+
+
+
 function Form() {
 
    
@@ -33,7 +36,7 @@ function Form() {
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [education, setEducation] = useState("");
- 
+    const [position, setPosition] = useState("");
     const errorNotification = () => toast.error("Please fill all the fields");
     const errorEmail = () => toast.error("Email or phone not valid !!");
     const successNotification = () => toast.success("Thanks for submitting");
@@ -56,6 +59,8 @@ function Form() {
       document.getElementById('email').value=""
       document.getElementById('phone').value=""
       document.getElementById('education').value=""
+      document.getElementById('position').value=""
+     
       document.getElementById('file').value=""
     };
 
@@ -88,7 +93,9 @@ const add=()=>{
   last:last,
   email:email,
   phone:phone,
-  education:education})
+  education:education,
+  position:position
+})
   .then(()=>{
  successNotification();
   })
@@ -201,7 +208,7 @@ const add=()=>{
         <FormLabel>Education</FormLabel>
         <Input type="text" placeholder='Education' id="education" onChange={(e) => setEducation(e.target.value)}/>
         <FormLabel>Position</FormLabel>
-        <Input type="text" placeholder='Position' id="position" onChange={(e) => setEducation(e.target.value)}/>
+        <Input type="text" placeholder='Position' id="position"nChange={(e) => setPosition(e.target.value)}/>
         <FormLabel>Phone Number</FormLabel>
         <Input type="phone" placeholder='Phone Number' id="phone" onChange={(e) => setPhone(e.target.value)}/>
 

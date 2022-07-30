@@ -1,23 +1,55 @@
 import { React, useRef, useState } from "react";
 import "./Contact.css";
-import {
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-} from "@chakra-ui/react";
-
-import {AiOutlineMail,AiOutlineMessage,AiOutlineUser} from "react-icons/ai"
-
-
+import code from "../../assets/code.png";
+import { NavLink } from "react-router-dom";
+import Footer from "../Footer/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import emailjs from "emailjs-com";
 
 import RenderMap from "../Map/Map";
+import Main from "../Home/Main";
 
-function Contact() {
+function Contact(props) {
+
+
+  const [hide, setHide] = useState(false);
+  const headerRef=useRef()
+
+  let menuOpen = false;
+
+  const menuBurgerOPen=(e)=>{
+    var btn = e.target;
+    if (!menuOpen) {
+      setHide(false);
+      headerRef.current.style.transform =
+        "translateX(0)";
+        menuOpen = true;
+      btn.classList.add('open');
+      
+      console.log(hide)
+    } else {
+      setHide(true);
+      headerRef.current.style.transform =
+        "translateX(100%)";
+        menuOpen = false;
+      btn.classList.remove('open');
+     
+      
+    }
+  }
+  //Change nav color when scrolling
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+  window.addEventListener("scroll", changeColor);
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -41,7 +73,7 @@ function Contact() {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState(this.props);
 
   const errorNotification = () => toast.error("Fill all fields!!!");
   const errorEmail = () => toast.error("Email not valid !!");
@@ -74,13 +106,90 @@ function Contact() {
   };
 
   return (
+    <>
+    <nav className={color ? "nav-links-scroll" : "nav-links"}>
+    <div className="iconPart">
+      <img src={code} className="icon" />
+      <h3 id="devIconHelp">DevHelp</h3>
+    </div>
+
+    <ul className="header-lists" ref={headerRef}>
+      <li>
+        <NavLink
+          to={"/"}
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+        >
+          about
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+        >
+          services
+        </NavLink>
+      </li>
+      
+      <li>
+        <NavLink
+          to="/"
+          spy={true}
+          smooth={true}
+          offset={-150}
+          duration={500}
+        >
+          Testimonial
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/Contact"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-150}
+          duration={500}
+        >
+          contact
+        </NavLink>
+      </li>
+      
+     
+    </ul>
+
+    <div
+      className="menu-burger"
+      onClick={menuBurgerOPen}
+    >
+      <div className="menu-btn-burger"></div>
+    </div>
+  </nav>
+  <Main/>
     <div id="contact" className="contact">
  
 
       <div className="contactContainer">
 
-        <div className="section1" data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom">
+        <div className="section1" >
+      
           <h1>Keep in touch !</h1>
           <p>For any suggestion or feedback please contact us</p>
           <form ref={form} onSubmit={checkInput} className="contact-form">
@@ -127,6 +236,25 @@ function Contact() {
         </div>
         
         <div className="section2">
+
+          <div className="contactPEA">
+            <div>
+                <h3>Adress</h3>
+                <p>Tunisia,Greece...</p>
+                </div>
+                <div>
+                <h3>Phone</h3>
+                <p>+216 12 345 678</p>
+                </div>
+                <div>
+                <h3>Email</h3>
+                <p>saoudisirine@gmail.com</p>
+                </div>
+                <div>
+                <h3>Working Time</h3>
+                <p>Monday-Thursday: 08 AM - 05 PM</p>
+                </div>
+          </div>
             <RenderMap/>
         </div>
         
@@ -144,6 +272,10 @@ function Contact() {
         pauseOnHover
       />
     </div>
+
+
+    <Footer/>
+    </>
   );
 }
 

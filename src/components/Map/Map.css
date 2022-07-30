@@ -1,8 +1,9 @@
 .mapContainer{
    position: relative;
    width:90%;
-   float: right;
+   /* float: right; */
    height: 62vh;
+   /* z-index: -1; */
 }
 
 .loading{

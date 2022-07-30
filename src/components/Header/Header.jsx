@@ -111,8 +111,8 @@ function Header() {
           </Link>
         </li>
         <li>
-          <Link
-            to="#contact"
+          <NavLink
+            to="/Contact"
             activeClass="active"
             spy={true}
             smooth={true}
@@ -120,7 +120,7 @@ function Header() {
             duration={500}
           >
             contact
-          </Link>
+          </NavLink>
         </li>
         
         {/* <NavLink
