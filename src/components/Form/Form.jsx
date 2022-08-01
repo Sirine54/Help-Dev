@@ -5,13 +5,11 @@ import {QuerySnapshot} from  "firebase/firestore";
 import {
     FormControl,
     FormLabel,
-    Input
+    Input,Select
   } from '@chakra-ui/react'
-  import { Link} from "react-router-dom";
-
   import { ToastContainer, toast } from "react-toastify";
   import "react-toastify/dist/ReactToastify.css";
-
+import { useNavigate } from 'react-router-dom';
   
 import { db } from '../../firebase-config';
 
@@ -25,9 +23,11 @@ import code from "../../assets/code.png";
 import { NavLink } from "react-router-dom";
 import { DotLoader } from "react-spinners";
 
+import {userContext} from '../Job/JobListing'
 
 
-function Form() {
+function Form(props) {
+  const navigate = useNavigate();
 
    
     const [file, setFile] = useState("");
@@ -98,6 +98,8 @@ const add=()=>{
 })
   .then(()=>{
  successNotification();
+ 
+//  navigate('/');
   })
 }
 
@@ -134,6 +136,7 @@ const add=()=>{
 
               // update progress
               setPercent(percent);
+              
           },
           (err) => console.log(err),
           () => {
@@ -152,7 +155,6 @@ const add=()=>{
       setLoading(false);
     }, 1000);
   }, []);
-
 
   return (
     <>
@@ -182,13 +184,25 @@ const add=()=>{
             smooth={true}
             offset={-100}
             duration={500}
+         
           >
             Back
           </NavLink>
         </li>
+        
       </ul>
+      <NavLink
+            activeClass="active"
+            to="/JobListing"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            id="back"
+          >
+           &larr;
+          </NavLink>
 
-   
     </nav>
   </div>
 
@@ -199,23 +213,47 @@ const add=()=>{
         <div className="formA">
         <h1>Apply For the job</h1>
         <FormControl >
+          <div className='inputFormF'>
         <FormLabel>First name</FormLabel>
         <Input type="text" placeholder='First name' id="first" onChange={(e) => setFirst(e.target.value)} />
+        </div>
+        <div className='inputFormF'>
         <FormLabel>Last name</FormLabel>
         <Input type="text" placeholder='Last name' id="last"onChange={(e) => setLast(e.target.value)}/>
+        </div>
+        <div className='inputFormF'>
         <FormLabel>Email</FormLabel>
         <Input type="email" placeholder='Email' id="email" onChange={(e) => setEmail(e.target.value)}/>
+        </div>
+        <div className='inputFormF'>
         <FormLabel>Education</FormLabel>
         <Input type="text" placeholder='Education' id="education" onChange={(e) => setEducation(e.target.value)}/>
+        </div>
+        <div className='inputFormF'>
         <FormLabel>Position</FormLabel>
-        <Input type="text" placeholder='Position' id="position"nChange={(e) => setPosition(e.target.value)}/>
+        <select placeholder='position' id="position" onChange={(e) => setPosition(e.target.value)}>
+          <option value="Senior Frontend Developer_Remote" >Senior Frontend Developer_Remote</option>
+          <option value="Fullstack Developer_Remote">Fullstack Developer_Remote</option>
+          <option value="Junior Frontend Developer_Tunisia Only">Junior Frontend Developer_Tunisia Only</option>
+          <option value="Junior Frontend Developer_Tunisia">Junior Frontend Developer_Tunisia</option>
+          <option value="Software Engineer_Remote">Software Engineer_Remote</option>
+          <option value="Junior Backend Developer_Tunisia Only">Junior Backend Developer_Tunisia Only</option>
+          <option value="Junior Frontend Developer_Greece">Junior Frontend Developer_Greece</option>
+          <option value="Full Stack Engineer_France">Full Stack Engineer_France</option>
+          <option value="Front-end Dev_Greece">Front-end Dev_Greece</option>
+        </select>
+       
+        
+        </div>
+        <div className='inputFormF'>
         <FormLabel>Phone Number</FormLabel>
         <Input type="phone" placeholder='Phone Number' id="phone" onChange={(e) => setPhone(e.target.value)}/>
-
+        </div>
+        <div className='inputFormF'>
         <FormLabel>Drop your cv</FormLabel>
-        <Input type="file"  accept='.doc,.docx,application/pdf' onChange={handleChange} id="file"/>
+        <Input type="file"  accept='.doc,.docx,application/pdf' onChange={handleChange} id="file" />
         <p>{percent}% done</p>
-
+        </div>
          <button type="submit" className='btnF' onClick={checkInput}>Send</button>
         </FormControl>
         </div>

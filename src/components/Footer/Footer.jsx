@@ -6,6 +6,7 @@ import {BsFillTelephoneFill,BsSuitHeartFill} from "react-icons/bs"
 import { HashLink as Link } from "react-router-hash-link";
 
 import code from "../../assets/code.png";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
@@ -94,8 +95,8 @@ function Footer() {
           </Link>
         </li>
         <li>
-          <Link
-            to="#contact"
+          <NavLink
+            to="/Contact"
             activeClass="active"
             spy={true}
             smooth={true}
@@ -103,7 +104,7 @@ function Footer() {
             duration={500}
           >
             contact
-          </Link>
+          </NavLink>
         </li>
         </div>
         </div>

@@ -170,8 +170,22 @@ left:5px;
   }
 }
 @media screen and (max-width:750px) {
+  .contactContainer .contact-form{
+    /* margin: 25px auto; */
+    display: flex;
+   
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
   .section1{
     margin-inline: 0;
     width: 100%;
+  }
+}
+
+@media screen and (max-width:394px) {
+  .section1 .sendMessage{
+    width: 100px;
   }
 }

@@ -44,3 +44,41 @@ display: block;
     background-color: var(--dark-orange);
 
 }
+
+.inputFormF{
+    margin-block: 19px;
+}
+.inputFormF label{
+    color: var(--dark-orange);
+    font-weight: 600;
+}
+.inputFormF input{
+    padding-left: 5px;
+}
+.inputFormF select{
+    width: 100%;
+    height: 45px;
+    border:1px solid black;
+    border-radius: 5px;
+}
+.inputFormF input:hover,
+.inputFormF select:hover{
+    box-shadow: 0px 0px 4px 0px rgba(41, 25, 5, 0.962);
+    border: none;
+}
+
+.formA p{
+    font-weight: 500;
+}
+#back{display: none;}
+
+@media screen and (max-width:1063px) {
+#back{
+    font-size: 28px;
+    transition: .5s all;
+  display: block;
+
+}
+#back:hover{
+    color: var(--dark-orange);
+}}

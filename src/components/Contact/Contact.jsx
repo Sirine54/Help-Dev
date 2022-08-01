@@ -73,7 +73,7 @@ function Contact(props) {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState(this.props);
+  const [message, setMessage] = useState("");
 
   const errorNotification = () => toast.error("Fill all fields!!!");
   const errorEmail = () => toast.error("Email not valid !!");
@@ -183,14 +183,13 @@ function Contact(props) {
     </div>
   </nav>
   <Main/>
-    <div id="contact" className="contact">
+    <div id="contact" className="contact"  data-aos="fade-right">
  
 
       <div className="contactContainer">
 
         <div className="section1" >
-      
-          <h1>Keep in touch !</h1>
+           <h1 data-aos="fade-right">Keep in touch !</h1>
           <p>For any suggestion or feedback please contact us</p>
           <form ref={form} onSubmit={checkInput} className="contact-form">
             <div className="inputBox">
@@ -214,6 +213,7 @@ function Contact(props) {
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              
             /></div>
 <div className="inputBox">
             {/* <AiOutlineMessage className="iconLabel"></AiOutlineMessage> */}

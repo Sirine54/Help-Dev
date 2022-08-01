@@ -43,19 +43,22 @@ function add(item){
     },
   ];
 
-  const [filterItem, setFilterItem] = useState(items);
-
-
 let checkoutOptions
-filterItem.map((index)=>{
-//  add(items[index])
- checkoutOptions = {
-  lineItems:[index],
-    mode: "subscription",
-    successUrl: `${window.location.origin}/Success`,
-    cancelUrl: `${window.location.origin}/cancel`
-  };
-})
+
+// filterItem.map((index)=>{
+for(let i=0;i<items.length;i++){
+  // return(
+  checkoutOptions = {
+    
+    lineItems:[items[i]],
+      mode: "subscription",
+      successUrl: `${window.location.origin}/Success`,
+      cancelUrl: `${window.location.origin}/cancel`
+    }
+    // )
+  }
+
+// })
 
 let redirectToCheckout;
 // filterItem.map((item)=>{
@@ -82,7 +85,7 @@ let redirectToCheckout;
     <div id="offers">
       <h4>Available Courses</h4>
       <div className="offer_container">
-        {offerData.map((offer,index) => {
+        {offerData.map((offer,i) => {
          
           return (
             <div
@@ -114,15 +117,14 @@ let redirectToCheckout;
               </List>
               <p>&euro;{offer.price}</p>
 
-              <button  key={index}
+              <button  key={i}
                 className="btnOff contactBtn"
+                // onClick={redirectToCheckout}
                 onClick={redirectToCheckout}
-                // onClick={()=>{
-                //   add(items[index])
-                // }}
-                disabled={isLoading}
+                // disabled={isLoading}
               >
-                {isLoading ? "Loading..." : "Get Started"}
+                {/* {isLoading ? "Loading..." : "Get Started"} */}
+                Get Started
               </button>
             </div>
           );
