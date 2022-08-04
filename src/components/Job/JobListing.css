@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.JobListing{
+  background:linear-gradient(rgba(0, 0, 0, 0.779),rgba(21, 19, 17, 0.259)),  
+  url("../../assets/background.jpg");
+  background-size: cover;
+  background-position: 100%;
+  top:0;
+  position: absolute;
+  width: 100%;
+}
+.headerJob{
+    position: absolute;
+    top:0;
+}
+.JobCards{
+ margin: 8% 10%;
+position: relative;
+}
+.JobBox{
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.314);
+
+    background-color: rgba(255, 255, 255, 0.814);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 100px 1fr 120px;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+   max-height: 400px;
+   position: relative;
+    
+}
+
+.JobBox::after{
+content: '';
+background: #0e4b4a;
+height: 100%;
+width: 0;
+position: absolute;
+transition: .2s all ease;
+border-top-left-radius: 2px;
+border-bottom-left-radius: 2px;
+}
+.JobBox::before{
+  content: '';
+  background:#0e4b4a;
+  right:0;
+  height: 100%;
+  width:0;
+  position: absolute;
+  transition: .2s all ease;
+  border-top-right-radius: 2px;
+   border-bottom-right-radius: 2px;
+}
+.JobBox:hover::after,
+.JobBox:hover::before{
+  width: 8px;
+}
+.imgJob{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.711);
+    width: 80px;
+    height:80px;
+    border-radius: 50%;
+    border-bottom:3px solid rgb(3, 3, 5);
+    outline:1px solid black ;
+   outline-offset: 2px;   
+}
+
+.applyBtn{
+  color: var(--dark-orange);
+  font-weight: 600;
+  border: var(--dark-orange) 1px solid;
+  border-radius: 12px;
+  margin: 12px;
+  transition: .5s all ease-in;
+  text-align: center;
+}
+.applyBtn:hover{
+  background-color: var(--dark-orange);
+  color: white;
+  outline: var(--dark-orange) 1px solid;
+  /* outline-offset: 4px; */
+  animation: hover 1s linear infinite;
+
+}
+@keyframes hover {
+
+  0%{
+    
+    outline-offset: 2px;
+  }
+  20%{
+   
+    outline-offset: 4px;
+  }
+  40%{
+    outline-offset: 6px;
+  }
+  60%{
+    outline-offset: 4px;
+  }
+80%{
+  outline-offset: 2px;
+}
+100%{
+  outline-offset: 0px;
+}
+  
+}
+
+
+
+/* ///////        Details          //////// */
+
+.posJob{
+    color: var(--dark-orange);
+    font-weight: 700;
+}
+.heading{
+  color: rgb(179, 75, 5);
+  font-weight: 800;
+}
+.new-tag {
+    background-color: #5DA5A4;
+}
+.tags {
+    font-size: 9px;
+    text-transform: uppercase;
+    color: #fff;
+    width: fit-content;
+  }
+  .tag {
+    font-size: 12px;
+    color: #0e4b4a;
+    background-color: #effafa;
+    font-weight: 500 !important;
+    cursor: pointer;
+  }
+  .skills{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 25px;
+  }
+  .details{
+    display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+  }
+  .posted,
+  .contract,
+ .location{
+    padding:5px;
+  }
+  .posted{
+    color: grey;
+    font-weight: 600;
+
+  }
+  .contract{
+    color: #8c7413;
+  }
+  .location{
+    color: var(--dark-orange);
+  }
+
+  /*--------------------   Create a custom scrollbar--------------------*/
+
+  .JobListing::-webkit-scrollbar {
+  width: .3em;
+  border-radius: 100px;
+}
+
+.JobListing::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.JobListing::-webkit-scrollbar-thumb {
+background-color:var(--dark-orange);
+/* outline: 0px solid rgb(255, 255, 255); */
+}
+
+@media screen and (max-width:775px) {
+  .JobBox{
+    display: grid;
+   grid-template-columns: none;
+  }
+  .applyBtn{
+    max-width: 100%;
+  }
+}
+@media screen and (max-width:475px) {
+  .JobBox{
+    display: grid;
+   grid-template-columns: none;
+   grid-template-rows: 1fr 1fr 1fr;
+  }
+  .details{
+    display: flex;
+    flex-direction: column;
+  }
+}

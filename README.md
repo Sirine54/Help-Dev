@@ -8,5 +8,3 @@
 //Tailwindcss for job listing
 //Json file to stock all data of jobs
 //react-toastify for alert message
-
-
