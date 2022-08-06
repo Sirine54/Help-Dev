@@ -1,6 +1,6 @@
 # final-project
 
-//API for map
+//map
 //EmailJs for contact
 //StripeJs for payment
 //Storage Firebase for cv uploading
@@ -8,3 +8,7 @@
 //Tailwindcss for job listing
 //Json file to stock all data of jobs
 //react-toastify for alert message
+
+
+## help-dev.netlify.app
+
