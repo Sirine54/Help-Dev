@@ -10,15 +10,12 @@
 //react-toastify for alert message
 
 
-## help-dev.netlify.app
 
 
-<h1 align="center"> Hello,I'm <a href="https://github.com/Sirine54" target="_blank"  align="center">Sirine</a>!!</h1>
+
+<h1 align="center">HelpDev Project</a>!!</h1>
 
 
-<h4 align="center"><q><i>It’s hard enough to find an error in your code when you’re looking for it; it’s even harder when you’ve assumed your code is error-free..</i></q>-Steve McConnell-</h4>
-
-<hr/>
 
 ### About the project:
 
