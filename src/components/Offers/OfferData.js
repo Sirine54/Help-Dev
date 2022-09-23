@@ -12,7 +12,7 @@ export const offerData  =[
     //     api:"price_1LOQhVEMYjbSpP6970D1my56"
 
     // },
-    
+    //
     // {
     //     title:"Topic Leader",
     //     image:experts,
