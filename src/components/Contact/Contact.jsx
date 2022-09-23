@@ -39,6 +39,7 @@ function Contact(props) {
       
     }
   }
+
   //Change nav color when scrolling
   const [color, setColor] = useState(false);
   const changeColor = () => {
@@ -95,14 +96,19 @@ function Contact(props) {
 
     if (name === "" || email === "" || message === "") {
       errorNotification();
-    } else if (!cheCkEmail(email)) {
-      errorEmail();
-    } else {
-      sendEmail();
-      successNotification();
-
-      init();
+      } else if (!cheCkEmail(email)) {
+        errorEmail();
+      } 
+    
+    else  {
+       sendEmail();
+       init();
+       successNotification();
+     
     }
+
+   
+  
   };
 
   return (
@@ -183,7 +189,8 @@ function Contact(props) {
     </div>
   </nav>
   <Main/>
-    <div id="contact" className="contact"  data-aos="fade-right">
+    <div id="contact" className="contact"  data-aos="fade-up"
+    data-aos-anchor-placement="top-center">
  
 
       <div className="contactContainer">

@@ -99,7 +99,7 @@ const[word,setWord]=useState('')
                
                     <NavLink to="/Form" className='applyBtn' onClick={()=> 
 
-setWord(list.position)
+console.log('clicked')
                       // console.log(list.position,"location",list.location)
                       }>apply</NavLink>
                 </div>

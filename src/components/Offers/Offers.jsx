@@ -5,6 +5,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import { List, ListItem, ListIcon } from "@chakra-ui/react";
 import { MdDone, MdSettings } from "react-icons/md";
 import "./Offers.css";
+
+
 let stripePromise;
 const getStripe = () => {
   if (!stripePromise) {

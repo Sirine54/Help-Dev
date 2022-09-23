@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+@import 'animate.css';
 
 body{
   scroll-behavior: smooth;
@@ -47,7 +47,8 @@ background-color: rgb(68, 60, 58);
 
 .loading_page{
   margin: 5% auto;
-display: block;
+   display: block;
+
 
 }
 

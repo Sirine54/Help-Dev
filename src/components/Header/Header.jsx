@@ -7,40 +7,15 @@ import code from "../../assets/code.png";
 import { NavLink } from "react-router-dom";
 
 function Header() {
-  const [hide, setHide] = useState(false);
-  const headerRef=useRef()
+  const [show, setShow] = useState(false);
 
-//   const lists = document.querySelectorAll('.header-lists li');
-//  lists.forEach((list)=>{
-//     list.onClick()
-//  })
-  // console.log(list)
-  // list.forEach(list=>{
-  //   list.onClick()
-  // })
 
-  let menuOpen = false;
-
-  const menuBurgerOPen=(e)=>{
-    var btn = e.target;
-    if (!menuOpen) {
-      setHide(false);
-      headerRef.current.style.transform =
-        "translateX(0)";
-        menuOpen = true;
-      btn.classList.add('open');
-      
-      console.log(hide)
-    } else {
-      setHide(true);
-      headerRef.current.style.transform =
-        "translateX(100%)";
-        menuOpen = false;
-      btn.classList.remove('open');
-     
-      
+ 
+  const menuBurgerOPen=()=>{
+    setShow(!show)
+    console.log('clicked')
     }
-  }
+  
   //Change nav color when scrolling
   const [color, setColor] = useState(false);
   const changeColor = () => {
@@ -54,26 +29,28 @@ function Header() {
 
 
   return (
-    <nav className={color ? "nav-links-scroll" : "nav-links"}>
+    <div className={color ? "nav-links-scroll" : "nav-links"}>
       <div className="iconPart">
-        <img src={code} className="icon" />
-        <h3 id="devIconHelp">DevHelp</h3>
+        <img src={code} className="icon" alt="code"/>
+        <h3 id="devIconHelp">HelpDev</h3>
       </div>
 
-      <ul className="header-lists" ref={headerRef}>
-        <li>
+      <div className={`navbar ${show ? "open" : "hide"}` }>
+        <nav className="header-lists">
           <Link
             activeClass="active"
-            to={"#home"}
+            to={"/"}
             spy={true}
             smooth={true}
             offset={-100}
             duration={500}
+            onClick={()=>{
+              setShow(false)
+                }}
           >
             Home
           </Link>
-        </li>
-        <li>
+        
           <Link
             activeClass="active"
             to="#about"
@@ -81,11 +58,13 @@ function Header() {
             smooth={true}
             offset={-100}
             duration={500}
+            onClick={()=>{
+              setShow(false)
+                }}
           >
             about
           </Link>
-        </li>
-        <li>
+       
           <Link
             to="#services"
             activeClass="active"
@@ -93,12 +72,13 @@ function Header() {
             smooth={true}
             offset={-100}
             duration={500}
+            onClick={()=>{
+              setShow(false)
+                }}
           >
             services
           </Link>
-        </li>
-        
-        <li>
+      
           <Link
             to="#testimonial"
             activeClass="active"
@@ -106,11 +86,13 @@ function Header() {
             smooth={true}
             offset={-150}
             duration={500}
+            onClick={()=>{
+              setShow(false)
+                }}
           >
             Testimonial
           </Link>
-        </li>
-        <li>
+        
           <NavLink
             to="/Contact"
             activeClass="active"
@@ -118,10 +100,13 @@ function Header() {
             smooth={true}
             offset={-150}
             duration={500}
+            onClick={()=>{
+              setShow(false)
+                }}
           >
             contact
           </NavLink>
-        </li>
+  
         
         {/* <NavLink
           to="/SignIn"
@@ -137,15 +122,17 @@ function Header() {
           <img id="photoImg"></img>
           <span id="userName"></span>
         </li> */}
-      </ul>
+      </nav>
 
-      <div
+      <button
         className="menu-burger"
         onClick={menuBurgerOPen}
       >
-        <div className="menu-btn-burger"></div>
-      </div>
-    </nav>
+        <span className="menu-btn-burger"></span>
+      </button>
+    </div>
+
+    </div>
   );
 }
 
